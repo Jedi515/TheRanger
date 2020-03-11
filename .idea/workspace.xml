@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TheRanger" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CharSelectInfo</find>
+      <find>getcardren</find>
+      <find>getCardTrailColor</find>
+      <find>getEnergyNumFont</find>
+      <find>mysticmod</find>
+      <find>/char</find>
+      <find>this.target</find>
+      <find>hidd</find>
+      <find>abstract</find>
+      <find>action</find>
+      <find>strike</find>
+      <find>block</find>
+      <find>barri</find>
+      <find>barric</find>
+      <find>blur</find>
+      <find>barr</find>
+      <find>barricade</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="ProjectId" id="1YZNEqeb9r7WBg3WfEnM6hnEAny" />
+  <component name="PropertiesComponent">
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="D:/Steam/SteamApps/workshop/content/646570/1619737531/Td1madaoMod.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\512" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\1024" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\relics" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\character" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\img" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="TheRanger.util" />
+      <recent name="TheRanger.cards.Ranger.skills" />
+      <recent name="TheRanger.actions" />
+      <recent name="TheRanger.patches" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\localization\eng" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+</project>

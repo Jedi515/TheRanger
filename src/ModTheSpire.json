@@ -1,0 +1,11 @@
+{
+  "modid": "jediranger",
+  "name": "The Ranger",
+  "author_list": ["Jedi#3970"],
+  "description": "Tries its best to add a new character.",
+  "credits": "",
+  "version": "0.0.1",
+  "sts_version": "12-20-2018",
+  "mts_version": "3.6.1",
+  "dependencies": ["basemod", "stslib"]
+}

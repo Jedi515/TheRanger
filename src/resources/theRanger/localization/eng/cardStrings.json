@@ -1,0 +1,127 @@
+{
+  "jediranger:dummy":
+  {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
+  "jediranger:Strike":
+  {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "jediranger:Defend":
+  {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "jediranger:RoughenFeathers":
+  {
+    "NAME": "Roughen Feathers",
+    "DESCRIPTION": "Deal !D! damage. jediranger:Empower !jediranger:EMP! the top !M! cards of your draw pile."
+  },
+  "jediranger:Empower":
+  {
+    "NAME": "Empower",
+    "DESCRIPTION": "jediranger:Empower !jediranger:EMP! all cards in your hand."
+  },
+  "jediranger:CopperWave":
+  {
+    "NAME": "Copper Wave",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "jediranger:GlassDagger":
+  {
+    "NAME": "Glass Dagger",
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT!. NL Deal !D! damage twice."
+  },
+  "jediranger:ArcaneSeer":
+  {
+    "NAME": "Arcane Seer",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a card with no Block or damage this turn, jediranger:Empower !M! the top card of your draw pile."
+  },
+  "jediranger:FadingMemories":
+  {
+    "NAME": "Fading Memories",
+    "DESCRIPTION": "Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand."
+  },
+  "jediranger:SignalArrow":
+  {
+    "NAME": "Signal Arrow",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust. NL When Exhausted, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust. NL When Exhausted, draw !M! cards."
+  },
+  "jediranger:CrystalStrike":
+  {
+    "NAME": "Crystal Strike",
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT!. NL Deal !D! damage."
+  },
+  "jediranger:CrystalShield":
+  {
+    "NAME": "Crystal Shield",
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT!. NL Gain !B! Block."
+  },
+  "jediranger:TwinGuard":
+  {
+    "NAME": "Twin Guard",
+    "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "jediranger:WitheringArrow":
+  {
+    "NAME": "Withering Arrow",
+    "DESCRIPTION": "jediranger:Drain !D!."
+  },
+  "jediranger:HeavyArrow":
+  {
+    "NAME": "Heavy Arrow",
+    "DESCRIPTION": "Deal !D! damage. NL jediranger:Empower !jediranger:EMP! all cards in your hand."
+  },
+  "jediranger:Transfusion":
+  {
+    "NAME": "Transfusion",
+    "DESCRIPTION": "jediranger:Empower -1 a card in hand. NL jediranger:Empower !jediranger:EMP! the top card of your draw pile."
+  },
+  "jediranger:Illuminate":
+  {
+    "NAME": "Illuminate",
+    "DESCRIPTION": "Gain !B! Block. NL jediranger:Empower !jediranger:EMP! a card in hand."
+  },
+  "jediranger:RivershaperStrike":
+  {
+    "NAME": "Rivershaper Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Fetch a card with no Block and damage from your draw pile."
+  },
+  "jediranger:Rally":
+  {
+    "NAME": "Rally",
+    "DESCRIPTION": "Gain !B! Block. NL If the top card of your draw pile is a Skill, jediranger:Empower !jediranger:EMP! all cards in your hand."
+  },
+  "jediranger:PerfectSetup":
+  {
+    "NAME": "Perfect Setup",
+    "DESCRIPTION": "Scry !M!. NL Put a card from your discard pile on top of your draw pile."
+  },
+  "jediranger:ArrowStab":
+  {
+    "NAME": "Arrow Stab",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.",
+    "EXTENDED_DESCRIPTION": [
+      "No cards to Exhaust!"
+    ]
+  },
+  "jediranger:VileFeast":
+  {
+    "NAME": "Vile Feast",
+    "DESCRIPTION": "jediranger:Drain !D!. NL Create a *Withering *Strike in hand with damage equal to twice the HP drained. NL Exhaust."
+  },
+  "jediranger:WitheringStrike":
+  {
+    "NAME": "Withering Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "jediranger:Vengeance":
+  {
+    "NAME": "Vengeance",
+    "DESCRIPTION": "jediranger:Drain !D!. NL At the end of your next turn, take damage equal to HP drained. NL Exhaust."
+  }
+}

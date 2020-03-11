@@ -1,0 +1,20 @@
+{
+  "jediranger:ArcaneSeer": {
+    "NAME": "Arcane Seer",
+    "DESCRIPTIONS": [
+      "When you play a card with no damage and #yBlock, #yEmpower #b%d the top card of your draw pile."
+    ]
+  },
+  "jediranger:DamageEndOfNextTurnPower": {
+    "NAME": "End of Next Turn Damage",
+    "DESCRIPTIONS": [
+      "At the end of next turn, take #b%d damage."
+    ]
+  },
+  "jediranger:DamageEndOfThisTurnPower": {
+    "NAME": "End of Turn Damage",
+    "DESCRIPTIONS": [
+      "At the end of this turn, take #b%d damage."
+    ]
+  }
+}

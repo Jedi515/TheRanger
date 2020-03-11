@@ -1,0 +1,18 @@
+{
+  "jediranger:dummy":
+  {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "jediranger:Amplifier":
+  {
+    "NAME": "Amplifier",
+    "FLAVOR": "20% cooler, 80% heater.",
+    "DESCRIPTIONS": [
+      "Whenever you #yjediranger:Empower a card, #yjediranger:Empower it by #b%d more."
+    ]
+  }
+}
