@@ -46,7 +46,6 @@ public class ArrowStab
     public void upgrade() {
         upgradeDamage(3);
         upgradeName();
-
     }
 
     @Override

@@ -29,6 +29,7 @@ public class Vengeance
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         setDamage(10);
+        tags.add(CardTags.HEALING);
         exhaust = true;
     }
 

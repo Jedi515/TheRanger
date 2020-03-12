@@ -25,6 +25,7 @@ public class WitheringArrow
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
+        tags.add(CardTags.HEALING);
         setDamage(1);
     }
 

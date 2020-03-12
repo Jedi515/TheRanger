@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="" />
+    <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/CrimsonSplitterAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/EndlessArrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/KissOfDeath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/PerfectedArrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/CrimsonPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/EnchantedQuiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonApotheosis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonSplitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonPrinterPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/EnchantedQuiverPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ArrowStab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ArrowStab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Vengeance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Vengeance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/VileFeast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/VileFeast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/WitheringArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/WitheringArrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,32 +40,15 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>CharSelectInfo</find>
-      <find>getcardren</find>
-      <find>getCardTrailColor</find>
-      <find>getEnergyNumFont</find>
-      <find>mysticmod</find>
-      <find>/char</find>
-      <find>this.target</find>
-      <find>hidd</find>
-      <find>abstract</find>
-      <find>action</find>
-      <find>strike</find>
-      <find>block</find>
-      <find>barri</find>
-      <find>barric</find>
-      <find>blur</find>
-      <find>barr</find>
-      <find>barricade</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YZNEqeb9r7WBg3WfEnM6hnEAny" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="D:/Steam/SteamApps/workshop/content/646570/1619737531/Td1madaoMod.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -85,5 +87,16 @@
   </component>
   <component name="SvnConfiguration">
     <configuration />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
