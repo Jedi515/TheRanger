@@ -1,8 +1,11 @@
 package TheRanger.cards.Ranger.skills;
 
 import TheRanger.actions.CrimsonSplitterAction;
+import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -32,6 +35,9 @@ public class CrimsonSplitter
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new CrimsonSplitterAction(magicNumber));
+        addToBot(new SelectCardsInHandAction("", (c -> {
+            addToBot(new MakeTempCardInDrawPileAction(c.makeStatEquivalentCopy(), magicNumber, true, false));
+        })));
+//        addToBot(new CrimsonSplitterAction(magicNumber));
     }
 }

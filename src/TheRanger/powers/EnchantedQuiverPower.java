@@ -2,6 +2,8 @@ package TheRanger.powers;
 
 import TheRanger.init.theRanger;
 import TheRanger.patches.RangerCardTags;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -25,7 +27,8 @@ public class EnchantedQuiverPower
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        loadRegion("strength");
+        this.region128 = new TextureAtlas.AtlasRegion(new Texture("resources/theRanger/images/powers/arrows power 84.png"), 0, 0, 84, 84);
+        this.region48 = new TextureAtlas.AtlasRegion(new Texture("resources/theRanger/images/powers/arrows power 32.png"), 0, 0, 32, 32);
         updateDescription();
     }
 
