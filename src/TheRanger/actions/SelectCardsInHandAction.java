@@ -83,7 +83,7 @@ public class SelectCardsInHandAction
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved)
         {
-            hand.forEach(c -> callback.accept(c));
+            AbstractDungeon.handCardSelectScreen.selectedCards.group.forEach(c -> {callback.accept(c); AbstractDungeon.player.hand.addToTop(c);});
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
             returnCards();

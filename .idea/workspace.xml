@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/RecklessArrow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/interfaces/selectCardInHandInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/CrimsonSplitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/CrimsonSplitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/EnchantedQuiverPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/EnchantedQuiverPower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonSplitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonSplitter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/EnchantedQuiverPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/EnchantedQuiverPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/interfaces/selectCardInHandInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
