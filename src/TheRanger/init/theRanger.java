@@ -13,8 +13,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -32,10 +35,12 @@ public class theRanger
             EditStringsSubscriber,
             EditCardsSubscriber,
             EditRelicsSubscriber,
-            EditKeywordsSubscriber
+            EditKeywordsSubscriber,
+            PostInitializeSubscriber
 {
     public static final String modID = "jediranger";
     public static Color rangerTeal = CardHelper.getColor(43.0F, 207.0F, 213.0F);
+    public static CardGroup chaosCards;
 
     public static String makeID(String ID_in)
     {
@@ -102,5 +107,16 @@ public class theRanger
     private static String GetLocString(String locCode, String name) {
         return Gdx.files.internal("resources/theRanger/localization/" + locCode + "/" + name + ".json").readString(
                 String.valueOf(StandardCharsets.UTF_8));
+    }
+
+    @Override
+    public void receivePostInitialize() {
+        chaosCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        CardLibrary.getAllCards().stream().filter(c ->
+                                (c.rarity != AbstractCard.CardRarity.SPECIAL) &&
+                                (c.rarity != AbstractCard.CardRarity.BASIC) &&
+                                (c.type != AbstractCard.CardType.CURSE) &&
+                                (c.type != AbstractCard.CardType.STATUS)
+                ).forEach(c -> chaosCards.group.add(c.makeCopy()));
     }
 }

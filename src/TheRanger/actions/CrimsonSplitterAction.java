@@ -45,7 +45,7 @@ public class CrimsonSplitterAction
         {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group)
             {
-                addToBot(new MakeTempCardInDrawPileAction(c.makeStatEquivalentCopy(), amount, true, false));
+                addToBot(new MakeTempCardInDrawPileAction(c.makeStatEquivalentCopy(), amount, true, true));
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();

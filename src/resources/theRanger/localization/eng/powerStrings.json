@@ -25,9 +25,15 @@
     ]
   },
   "jediranger:EnchantedQuiverPower": {
-  "NAME": "Enchanted Quiver",
-  "DESCRIPTIONS": [
-    "Cards containing \"Arrow\" deal #b%d additional damage."
-  ]
-}
+    "NAME": "Enchanted Quiver",
+    "DESCRIPTIONS": [
+      "Cards containing \"Arrow\" deal #b%d additional damage."
+    ]
+  },
+  "jediranger:CrimsonHarvestPower": {
+    "NAME": "Crimson Harvest",
+    "DESCRIPTIONS": [
+      "Whenever you kill a non-minion enemy, heal #b%d HP."
+    ]
+  }
 }

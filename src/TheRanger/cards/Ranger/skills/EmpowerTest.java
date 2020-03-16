@@ -20,8 +20,8 @@ public class EmpowerTest
 
     public EmpowerTest()
     {
-        super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, AbstractCard.CardTarget.NONE);
-        setEMPValue(3);
+        super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
+        setEMPValue(1);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class EmpowerTest
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new EmpowerAction(EmpowerAction.getEmpowerableCards(AbstractDungeon.player.hand), this.empoweringValue));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new EmpowerAction(p.hand, this.empoweringValue));
     }
 }

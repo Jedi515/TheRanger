@@ -1,45 +1,41 @@
 package TheRanger.cards.Ranger.skills;
 
 import TheRanger.actions.EmpowerAction;
-import TheRanger.actions.EmpowerSelectCards;
-import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.cards.Ranger.RangerCard;
-import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MoveCardsAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Illuminate
+public class AlarmClock
     extends RangerCard
 {
-    public static final String ID = makeCardID("Illuminate");
-    private static String[] TEXT = CardCrawlGame.languagePack.getUIString(theRanger.makeID("EmpowerUI")).TEXT;
+    public static final String ID = makeCardID("AlarmClock");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 2;
+    public static final int COST = 1;
 
-    public Illuminate()
+    public AlarmClock()
     {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        setEMPValue(2);
-        setBlock(6);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.SELF);
+        setEMPValue(1);
+        setBlock(3);
     }
 
     @Override
     public void upgrade() {
+        upgradeBlock(2);
         upgradeName();
-        upgradeEmpValue(1);
-        upgradeBlock(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new SelectCardsInHandAction(String.format(TEXT[0], empoweringValue), EmpowerAction::isEmpowerable, c -> EmpowerAction.empowerCard(c, empoweringValue)));
-//        addToBot(new EmpowerSelectCards(p.hand, 1, empoweringValue));
+        addToBot(new MoveCardsAction(AbstractDungeon.player.drawPile, AbstractDungeon.player.discardPile, EmpowerAction::isEmpowerable, 1, cardList-> cardList.forEach(c -> EmpowerAction.empowerCard(c, empoweringValue))));
     }
 }

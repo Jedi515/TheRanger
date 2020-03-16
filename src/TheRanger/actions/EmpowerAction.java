@@ -34,12 +34,17 @@ public class EmpowerAction
         this.duration = this.startDuration = Settings.ACTION_DUR_XFAST;
     }
 
+    public static boolean isEmpowerable(AbstractCard c)
+    {
+        return (c.baseDamage > -1 || c.baseBlock > -1);
+    }
+
     public static CardGroup getEmpowerableCards(CardGroup group)
     {
         CardGroup returnGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c: group.group)
         {
-            if ((c.baseBlock > -1) || (c.baseDamage > -1))
+            if (isEmpowerable(c))
             {
                 returnGroup.addToTop(c);
             }
@@ -57,6 +62,7 @@ public class EmpowerAction
         {
             if (p instanceof modifyEmpowerInterface) tmpEmp = ((modifyEmpowerInterface)p).modifyEmpower(card,tmpEmp);
         }
+
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters)
         {
             for (AbstractPower p : m.powers)
@@ -70,7 +76,12 @@ public class EmpowerAction
         }
 
         EmpowerField.EmpowerFieldItself.empowerValue.set(card, EmpowerField.EmpowerFieldItself.empowerValue.get(card) + tmpEmp);
-        card.applyPowers();
+
+        if (AbstractDungeon.player.hand.group.contains(card))
+        {
+            card.flash();
+            card.applyPowers();
+        }
 
         if ((card instanceof RangerCard) && (((RangerCard)card).brittle != -1) && (((RangerCard)card).brittle < EmpowerField.EmpowerFieldItself.empowerValue.get(card)))
         {
@@ -85,17 +96,13 @@ public class EmpowerAction
 
     public void update()
     {
+        if (amount == 0) {
+            this.isDone = true; return;
+        }
+
         if (this.duration == this.startDuration)
         {
-            for (AbstractCard card : getEmpowerableCards(crdGroup).group)
-            {
-                empowerCard(card, amount);
-
-                if (AbstractDungeon.player.hand.group.contains(card))
-                {
-                    card.flash();
-                }
-            }
+            getEmpowerableCards(crdGroup).group.forEach(c -> empowerCard(c, amount));
             this.isDone = true;
         }
     }

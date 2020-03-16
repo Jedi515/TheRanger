@@ -1,8 +1,11 @@
 package TheRanger.cards.Ranger.skills;
 
+import TheRanger.actions.EmpowerAction;
 import TheRanger.actions.EmpowerSelectCards;
 import TheRanger.actions.EmpowerTopdeckAction;
+import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.cards.Ranger.RangerCard;
+import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +16,7 @@ public class Transfusion
     extends RangerCard
 {
     public static final String ID = makeCardID("Transfusion");
+    private static String[] TEXT = CardCrawlGame.languagePack.getUIString(theRanger.makeID("EmpowerUI")).TEXT;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -32,7 +36,8 @@ public class Transfusion
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new EmpowerSelectCards(p.hand, 1, -1));
+//        addToBot(new EmpowerSelectCards(p.hand, 1, -1));
+        addToBot(new SelectCardsInHandAction(String.format(TEXT[0], -1), EmpowerAction::isEmpowerable, c -> EmpowerAction.empowerCard(c, -1)));
         addToBot(new EmpowerTopdeckAction(1, empoweringValue));
     }
 }

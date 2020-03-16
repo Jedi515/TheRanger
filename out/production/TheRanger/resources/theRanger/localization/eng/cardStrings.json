@@ -132,7 +132,10 @@
   "jediranger:CrimsonSplitter":
   {
     "NAME": "Crimson Splitter",
-    "DESCRIPTION": "Shuffle !M! copies of a card into your draw pile. NL Exhaust."
+    "DESCRIPTION": "Shuffle !M! copies of a card into your draw pile. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "shuffle %d copies into your draw pile."
+    ]
   },
   "jediranger:PerfectedArrow":
   {
@@ -154,9 +157,52 @@
     "NAME": "Crimson Apotheosis",
     "DESCRIPTION": "Lose !M! HP. NL jediranger:Empower !jediranger:EMP! ALL cards. NL Exhaust."
   },
-  "jediranger:EnchantedQuiver":
+  "jediranger:EnchantedArrows":
   {
-    "NAME": "Enchanted Quiver",
+    "NAME": "Enchanted Arrows",
     "DESCRIPTION": "Cards containing \"Arrow\" deal !M! additional damage."
+  },
+  "jediranger:PiercingArrows":
+  {
+    "NAME": "Piercing Arrows",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "jediranger:FlashOfInspiration":
+  {
+    "NAME": "Flash of Inspiration",
+    "DESCRIPTION": "Draw !M! card. NL Refill your [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Refill your [E]. NL Exhaust."
+  },
+  "jediranger:AlarmClock":
+  {
+    "NAME": "Alarm Clock",
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of your draw pile and jediranger:Empower !jediranger:EMP! it."
+  },
+  "jediranger:CrimsonHarvest":
+  {
+    "NAME": "Crimson Harvest",
+    "DESCRIPTION": "Whenever you kill a non-minion enemy, heal !M! HP.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you kill a non-minion enemy, heal !M! HP."
+  },
+  "jediranger:OneShot":
+  {
+    "NAME": "One Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Absorb all jediranger:Empower from all cards in your hand."
+  },
+  "jediranger:CrimsonDiscovery":
+  {
+    "NAME": "Crimson Discovery",
+    "DESCRIPTION": "Lose !M! HP. NL Choose 1 of 3 Attacks to jediranger:Empower !jediranger:EMP! and add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Choose 1 of 3 Attacks to jediranger:Empower !jediranger:EMP! and add to your hand."
+  },
+  "jediranger:CrimsonChaos":
+  {
+    "NAME": "Crimson Chaos",
+    "DESCRIPTION": "Lose 4 HP. NL For each *Crimson *Chaos played this combat, shuffle a random card into your draw pile. ( !M! ) NL Exhaust"
+  },
+  "jediranger:GlassArrow":
+  {
+    "NAME": "Glass Arrow",
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage."
   }
 }

@@ -1,10 +1,11 @@
 package TheRanger.characters;
 
 import TheRanger.cards.Ranger.attacks.CopperWave;
-import TheRanger.cards.Ranger.attacks.RoughenFeathers;
 import TheRanger.cards.Ranger.attacks.Strike;
+import TheRanger.cards.Ranger.skills.AlarmClock;
 import TheRanger.cards.Ranger.skills.Defend;
 import TheRanger.patches.AbstractCardEnum;
+import TheRanger.relics.RegularQuiver;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -53,7 +54,7 @@ public class Ranger
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
 
-        retVal.add(RoughenFeathers.ID);
+        retVal.add(AlarmClock.ID);
         retVal.add(CopperWave.ID);
 
         return retVal;
@@ -63,7 +64,7 @@ public class Ranger
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PrismaticShard.ID);
+        retVal.add(RegularQuiver.ID);
         return retVal;
     }
 

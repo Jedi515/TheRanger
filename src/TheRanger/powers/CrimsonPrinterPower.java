@@ -58,7 +58,7 @@ public class CrimsonPrinterPower
             }
 
             if (HPLoss > 0) addToBot(new LoseHPAction(owner, owner, HPLoss));
-            addToBot(new MakeTempCardInDrawPileAction(card.makeStatEquivalentCopy(), 1, true, false));
+            addToBot(new MakeTempCardInDrawPileAction(card.makeStatEquivalentCopy(), 1, true, true));
         }
     }
 }
