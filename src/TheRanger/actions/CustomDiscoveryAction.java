@@ -64,7 +64,10 @@ public class CustomDiscoveryAction
                         AbstractCard tmp = group.getRandomCard(true);
                         for (AbstractCard c : groupToShow.group)
                         {
-                            if (c.cardID.equals(tmp.cardID)) dupe = true;
+                            if (c.cardID.equals(tmp.cardID)) {
+                                dupe = true;
+                                break;
+                            }
                         }
 
                         if (!dupe)

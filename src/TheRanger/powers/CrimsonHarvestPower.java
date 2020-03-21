@@ -27,6 +27,8 @@ public class CrimsonHarvestPower
         this.owner = owner;
         this.amount = amount;
         type = PowerType.BUFF;
+        updateDescription();
+        loadRegion("regen");
     }
 
     public void updateDescription()

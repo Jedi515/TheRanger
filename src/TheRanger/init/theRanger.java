@@ -41,6 +41,7 @@ public class theRanger
     public static final String modID = "jediranger";
     public static Color rangerTeal = CardHelper.getColor(43.0F, 207.0F, 213.0F);
     public static CardGroup chaosCards;
+    public static CardGroup remembranceCards;
 
     public static String makeID(String ID_in)
     {
@@ -112,11 +113,17 @@ public class theRanger
     @Override
     public void receivePostInitialize() {
         chaosCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        remembranceCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         CardLibrary.getAllCards().stream().filter(c ->
                                 (c.rarity != AbstractCard.CardRarity.SPECIAL) &&
                                 (c.rarity != AbstractCard.CardRarity.BASIC) &&
                                 (c.type != AbstractCard.CardType.CURSE) &&
                                 (c.type != AbstractCard.CardType.STATUS)
                 ).forEach(c -> chaosCards.group.add(c.makeCopy()));
+        CardLibrary.getAllCards().stream().filter(c ->
+                        (c.color == AbstractCardEnum.RANGER_COLOR) &&
+                        (c.rarity == AbstractCard.CardRarity.RARE) &&
+                        (!c.hasTag(AbstractCard.CardTags.HEALING))
+                ).forEach(c -> remembranceCards.addToTop(c.makeCopy()));
     }
 }

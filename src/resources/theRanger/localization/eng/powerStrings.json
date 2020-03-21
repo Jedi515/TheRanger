@@ -35,5 +35,17 @@
     "DESCRIPTIONS": [
       "Whenever you kill a non-minion enemy, heal #b%d HP."
     ]
+  },
+  "jediranger:LastGloryPower": {
+    "NAME": "Last Glory",
+    "DESCRIPTIONS": [
+      "Whenever a card is #yExhausted, #yEmpower #b%d the top #b%d cards of your draw pile."
+    ]
+  },
+  "jediranger:CrimsonFormPower": {
+    "NAME": "Crimson Form",
+    "DESCRIPTIONS": [
+      "If you don't have enough [E] to play a card you may spend #b3 times your HP."
+    ]
   }
 }

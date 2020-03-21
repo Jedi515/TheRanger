@@ -10,16 +10,20 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlyingOrbEffect;
+
+import java.util.function.Consumer;
 
 public class DrainAction
     extends AbstractGameAction
 {
     AbstractCard sourceCard;
+    Consumer<Integer> callback;
 
-    public DrainAction(AbstractCreature source, AbstractCreature target, int amount, DamageInfo.DamageType type, AttackEffect effect, AbstractCard sourceCard)
+    public DrainAction(AbstractCreature source, AbstractCreature target, int amount, DamageInfo.DamageType type, AttackEffect effect, AbstractCard sourceCard, Consumer<Integer> callback)
     {
         setValues(target, source, amount);
         actionType = ActionType.DAMAGE;
@@ -27,6 +31,12 @@ public class DrainAction
         attackEffect = effect;
         duration = Settings.ACTION_DUR_FAST;
         this.sourceCard = sourceCard;
+        this.callback = callback;
+    }
+
+    public DrainAction(AbstractCreature source, AbstractCreature target, int amount, DamageInfo.DamageType type, AttackEffect effect, AbstractCard sourceCard)
+    {
+        this(source, target, amount, type, effect, sourceCard, null);
     }
 
     @Override
@@ -57,6 +67,8 @@ public class DrainAction
 
             if (healAmount > 0)
             {
+                if (callback != null) callback.accept(healAmount);
+
                 if (sourceCard instanceof onDrainInterface)
                 {
                     ((onDrainInterface)sourceCard).onDrain(healAmount, target);

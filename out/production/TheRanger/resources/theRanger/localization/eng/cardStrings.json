@@ -104,7 +104,7 @@
   "jediranger:ArrowStab":
   {
     "NAME": "Arrow Stab",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card.",
+    "DESCRIPTION": "Exhaust a card to play. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "No cards to Exhaust!"
     ]
@@ -204,5 +204,31 @@
   {
     "NAME": "Glass Arrow",
     "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage."
+  },
+  "jediranger:ChillingGrasp":
+  {
+    "NAME": "Chilling Grasp",
+    "DESCRIPTION": "jediranger:Drain !D!. NL Enemy loses Strength this turn equal to HP drained. NL Exhaust."
+  },
+  "jediranger:LastGlory":
+  {
+    "NAME": "Last Glory",
+    "DESCRIPTION": "Whenever a card is Exhausted, jediranger:Empower !jediranger:EMP! the !M! top cards of your draw pile."
+  },
+  "jediranger:Remembrance":
+  {
+    "NAME": "Remembrance",
+    "DESCRIPTION": "Costs 1 less [E] for each card Exhausted this turn. NL Choose 1 of !M! rare cards to add to your hand. NL Exhaust."
+  },
+  "jediranger:Mobilize":
+  {
+    "NAME": "Mobilize",
+    "DESCRIPTION": "Reduce the cost of all cards in your hand by !M! [E] this turn. NL Exhaust."
+  },
+  "jediranger:CrimsonForm":
+  {
+    "NAME": "Crimson Form",
+    "DESCRIPTION": "Ethereal. NL If you don't have enough [E] to play a card you may spend 3 times your HP.",
+    "UPGRADE_DESCRIPTION": "If you don't have enough [E] to play a card you may spend 3 times your HP."
   }
 }
