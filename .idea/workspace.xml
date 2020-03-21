@@ -7,28 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/MobilizeAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ChillingGrasp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/CrimsonForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/LastGlory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Mobilize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Remembrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/interfaces/cardOnExhaustOther.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/patches/CrimsonFormPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/patches/ExhaustedPerTurnPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonFormPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/LastGloryPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/CustomDiscoveryAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/CustomDiscoveryAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/DrainAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/DrainAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/CustomDiscoveryAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/CustomDiscoveryAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/DrainAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/DrainAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/CrimsonFormPatch$Locator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/CrimsonFormPatch$Locator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/CrimsonFormPatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/CrimsonFormPatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/patches/CrimsonFormPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/patches/CrimsonFormPatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonHarvestPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonHarvestPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

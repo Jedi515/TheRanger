@@ -3,7 +3,6 @@ package TheRanger.powers;
 import TheRanger.init.theRanger;
 import TheRanger.interfaces.onEnemyDeathPower;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -34,11 +33,6 @@ public class CrimsonHarvestPower
     public void updateDescription()
     {
         this.description = String.format(DESCRIPTIONS[0], this.amount);
-    }
-
-    @Override
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-
     }
 
     @Override

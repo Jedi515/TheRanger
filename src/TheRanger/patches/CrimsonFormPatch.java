@@ -21,7 +21,9 @@ import java.util.ArrayList;
 
 public class CrimsonFormPatch
 {
-    private static Color ENERGY_COST_RESTRICTED_COLOR = new Color(0.8F, 0.2F, 0.2F, 1.0F);
+    private static Color ENERGY_COST_RESTRICTED_COLOR =
+            Color.SALMON.cpy();
+//            new Color(1.0F, 0.6F, 0.6F, 1.0F);
     @SpirePatch(clz = AbstractCard.class, method = "getCost")
     public static class RenderText
     {
@@ -68,7 +70,7 @@ public class CrimsonFormPatch
     {
         public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException
         {
-            Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "player");
+            Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractCard.class, "transparency");
             return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher);
         }
     }
