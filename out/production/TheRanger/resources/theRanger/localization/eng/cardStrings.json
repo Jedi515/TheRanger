@@ -228,7 +228,16 @@
   "jediranger:CrimsonForm":
   {
     "NAME": "Crimson Form",
-    "DESCRIPTION": "Ethereal. NL If you don't have enough [E] to play a card you may spend 3 times your HP.",
-    "UPGRADE_DESCRIPTION": "If you don't have enough [E] to play a card you may spend 3 times your HP."
+    "DESCRIPTION": "If you don't have enough [E] to play a card, you may spend 3 HP for each [E] missing."
+  },
+  "jediranger:GlassSword":
+  {
+    "NAME": "Glass Sword",
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage to ALL enemies. NL If this card is at maximum jediranger:Empower, double its base damage."
+  },
+  "jediranger:CardModTest":
+  {
+    "NAME": "CardModTest",
+    "DESCRIPTION": "Choose a card in hand to make it cost 10 gold per [E] instead of [E]."
   }
 }

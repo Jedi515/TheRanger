@@ -21,14 +21,13 @@ public class CrimsonForm
 
     public CrimsonForm() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.SELF);
-        isEthereal = true;
         tags.add(BaseModCardTags.FORM);
     }
 
     @Override
     public void upgrade() {
         upgradeName();
-        isEthereal = false;
+        upgradeBaseCost(cost - 1);
     }
 
     @Override

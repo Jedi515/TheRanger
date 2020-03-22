@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
+import javassist.expr.ExprEditor;
 
 import java.util.ArrayList;
 
@@ -41,10 +42,20 @@ public class CrimsonFormPatch
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class RedColorEnergy
     {
+//        public static ExprEditor Instrument() {
+//            return new ExprEditor() {
+//                //render HP icon here "D:/Steam/SteamApps/common/SlayTheSpire/desktop-1.0.jar!/images/ui/topPanel/panelHeart.png"
+//            };
+//        }
+
         @SpireInsertPatch(locator = Locator.class, localvars = {"costColor"})
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef Color[] costColor)
         {
-            if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(CrimsonFormPower.POWER_ID) && __instance.costForTurn > EnergyPanel.getCurrentEnergy()) costColor[0] = ENERGY_COST_RESTRICTED_COLOR;
+            if (AbstractDungeon.player != null &&
+                    __instance.hasEnoughEnergy() &&
+                    AbstractDungeon.player.hasPower(CrimsonFormPower.POWER_ID) &&
+                    __instance.costForTurn > EnergyPanel.getCurrentEnergy())
+                costColor[0] = ENERGY_COST_RESTRICTED_COLOR;
         }
     }
 

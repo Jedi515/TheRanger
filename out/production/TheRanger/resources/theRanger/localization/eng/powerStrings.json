@@ -45,7 +45,7 @@
   "jediranger:CrimsonFormPower": {
     "NAME": "Crimson Form",
     "DESCRIPTIONS": [
-      "If you don't have enough [E] to play a card you may spend #b3 times your HP."
+      "If you don't have enough [E] to play a card you may spend #b3 HP for each [E] missing."
     ]
   }
 }

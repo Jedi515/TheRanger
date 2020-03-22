@@ -70,7 +70,7 @@ public class SelectCardsInHandAction
 
             if (!anyNumber && !canPickZero && hand.size() <= amount)
             {
-
+                hand.forEach(c -> callback.accept(c));
                 returnCards();
                 isDone = true;
                 return;
