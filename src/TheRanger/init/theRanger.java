@@ -16,6 +16,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
@@ -24,8 +25,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import java.nio.charset.StandardCharsets;
 
 import static TheRanger.patches.RangerClassEnum.RANGER;
-import static basemod.BaseMod.gson;
-import static basemod.BaseMod.loadCustomStringsFile;
+import static basemod.BaseMod.*;
 
 @SpireInitializer
 public class theRanger
@@ -53,7 +53,8 @@ public class theRanger
         BaseMod.subscribe(this);
         BaseMod.addColor(AbstractCardEnum.RANGER_COLOR, rangerTeal, rangerTeal, rangerTeal, rangerTeal, rangerTeal, rangerTeal, rangerTeal,
                 "resources/theRanger/images/512/bg_attack_ranger.png", "resources/theRanger/images/512/bg_skill_ranger.png", "resources/theRanger/images/512/bg_power_ranger.png", "resources/theRanger/images/512/card_teal_orb.png",
-                "resources/theRanger/images/1024/bg_attack_ranger.png", "resources/theRanger/images/1024/bg_skill_ranger.png", "resources/theRanger/images/1024/bg_power_ranger.png", "resources/theRanger/images/1024/card_teal_orb.png");
+                "resources/theRanger/images/1024/bg_attack_ranger.png", "resources/theRanger/images/1024/bg_skill_ranger.png", "resources/theRanger/images/1024/bg_power_ranger.png", "resources/theRanger/images/1024/card_teal_orb.png",
+                "resources/theRanger/images/orb.png");
     }
 
     public static void initialize()
@@ -88,22 +89,54 @@ public class theRanger
     }
 
     @Override
-    public void receiveEditStrings() {
-        loadCustomStringsFile(CardStrings.class, "resources/theRanger/localization/eng/cardStrings.json");
-        loadCustomStringsFile(RelicStrings.class, "resources/theRanger/localization/eng/relicStrings.json");
-//        loadCustomStringsFile(PotionStrings.class, "resources/localization/potionStrings.json");
-        loadCustomStringsFile(PowerStrings.class, "resources/theRanger/localization/eng/powerStrings.json");
-//        loadCustomStringsFile(EventStrings.class, "resources/localization/eventStrings.json");
-        loadCustomStringsFile(UIStrings.class, "resources/theRanger/localization/eng/UIStrings.json");
+    public void receiveEditKeywords() {
+        loadKeywords("eng");
+        if (Settings.language != Settings.GameLanguage.ENG)
+        {
+            loadKeywords(Settings.language.toString().toLowerCase());
+        }
     }
 
-    @Override
-    public void receiveEditKeywords() {
-        for (Keyword keyword : gson.fromJson(GetLocString("eng", "keywordStrings"), Keyword[].class))
+    private void loadKeywords(String langKey)
+    {
+        if (!Gdx.files.internal("resources/theRanger/localization/" + langKey).exists())
+        {
+            System.out.println("JEDI CHAR: Language not found: " + langKey);
+            return;
+        }
+
+        for (Keyword keyword : gson.fromJson(GetLocString(langKey, "keywordStrings"), Keyword[].class))
         {
             BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         }
     }
+
+
+    @Override
+    public void receiveEditStrings() {
+        loadStrings("eng");
+        if (Settings.language != Settings.GameLanguage.ENG)
+        {
+            loadStrings(Settings.language.toString().toLowerCase());
+        }
+    }
+
+    private void loadStrings(String langKey)
+    {
+        if (!Gdx.files.internal("resources/theRanger/localization/" + langKey).exists())
+        {
+            System.out.println("JEDI CHAR: Language not found: " + langKey);
+            return;
+        }
+
+        loadCustomStrings(CardStrings.class, GetLocString(langKey, "cardStrings"));
+        loadCustomStrings(RelicStrings.class, GetLocString(langKey, "relicStrings"));
+        loadCustomStrings(PowerStrings.class, GetLocString(langKey, "powerStrings"));
+//        loadCustomStrings(CharacterStrings.class, GetLocString(langKey, "characterStrings"));
+        loadCustomStrings(UIStrings.class, GetLocString(langKey, "UIStrings"));
+//        loadCustomStrings(PotionStrings.class, GetLocString(langKey, "potionStrings"));
+    }
+
 
     private static String GetLocString(String locCode, String name) {
         return Gdx.files.internal("resources/theRanger/localization/" + locCode + "/" + name + ".json").readString(

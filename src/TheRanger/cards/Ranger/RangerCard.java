@@ -4,6 +4,8 @@ import TheRanger.init.theRanger;
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 @AutoAdd.Ignore
 public abstract class RangerCard
@@ -45,10 +47,7 @@ public abstract class RangerCard
         return img;
     }
 
-    protected void setEMPValue(int amount)
-    {
-        this.empoweringValue = this.empoweringBaseValue = amount;
-    }
+    protected void setEMPValue(int amount) { this.empoweringValue = this.empoweringBaseValue = amount; }
     protected void setDamage(int amount) { this.damage = this.baseDamage = amount; }
     protected void setBlock(int amount) { this.block = this.baseBlock = amount; }
     protected void setMN(int amount) { this.magicNumber = this.baseMagicNumber = amount; }
@@ -82,6 +81,13 @@ public abstract class RangerCard
         empoweringBaseValue += amount;
         empoweringValue = empoweringBaseValue;
         isEmpoweringValueUpgraded = true;
+    }
+
+    public static void makeEphemeral(AbstractCard c)
+    {
+        c.glowColor = Color.RED.cpy();
+        c.exhaust = true;
+        c.isEthereal = true;
     }
 
     protected static String makeCardID(String ID_in)

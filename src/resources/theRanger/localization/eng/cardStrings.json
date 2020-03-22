@@ -235,9 +235,59 @@
     "NAME": "Glass Sword",
     "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage to ALL enemies. NL If this card is at maximum jediranger:Empower, double its base damage."
   },
-  "jediranger:CardModTest":
+  "jediranger:Overcharge":
   {
-    "NAME": "CardModTest",
-    "DESCRIPTION": "Choose a card in hand to make it cost 10 gold per [E] instead of [E]."
+    "NAME": "Overcharge",
+    "DESCRIPTION": "Select a card in hand to jediranger:Empower !jediranger:EMP! and make it jediranger:Ephemeral. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Overcharge."
+    ]
+  },
+  "jediranger:ObliviousCloak":
+  {
+    "NAME": "Oblivious Cloak",
+    "DESCRIPTION": "Gain !B! Block. NL Select a card in hand to reduce cost by 1 [E] and make it jediranger:Ephemeral.",
+    "EXTENDED_DESCRIPTION": [
+      "reduce cost by 1 and make Ephemeral."
+    ]
+  },
+  "jediranger:ProgressDay":
+  {
+    "NAME": "Progress Day",
+    "DESCRIPTION": "Draw !M! cards. NL Reduce their cost by 1 this turn."
+  },
+  "jediranger:Rummage":
+  {
+    "NAME": "Rummage",
+    "DESCRIPTION": "Exhaust a card. NL jediranger:Recall !M! cards."
+  },
+  "jediranger:FocusingShard":
+  {
+    "NAME": "Focusing Shard",
+    "DESCRIPTION": "Whenever you jediranger:Empower a card, jediranger:Empower it by !M! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you jediranger:Empower a card, jediranger:Empower it by !M! more."
+  },
+  "jediranger:CrimsonDemon":
+  {
+    "NAME": "Crimson Demon",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage to ALL enemies."
+  },
+  "jediranger:FreshOfferings":
+  {
+    "NAME": "Fresh Offerings",
+    "DESCRIPTION": "Can only be played if you Exhausted !M! cards this turn. NL Add a *Crimson *Demon to your hand. NL Exhaust."
+  },
+  "jediranger:CrimsonOffering":
+  {
+    "NAME": "Crimson Offering",
+    "DESCRIPTION": "Exhaust any number of cards. NL jediranger:Empower !jediranger:EMP! that many cards on top of your draw pile. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust."
+    ]
+  },
+  "jediranger:TwinDisciplines":
+  {
+    "NAME": "Twin Disciplines",
+    "DESCRIPTION": "Drain !D!. NL Gain Temporary_HP equal to HP drained. NL Exhaust."
   }
 }

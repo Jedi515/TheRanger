@@ -92,7 +92,7 @@ public class Ranger
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Strike();
+        return new AlarmClock();
     }
 
     @Override

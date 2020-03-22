@@ -2,7 +2,9 @@
   {
     "PROPER_NAME": "Empower",
     "NAMES": [
-      "empower"
+      "empower",
+      "empowerable",
+      "Empowerable"
     ],
     "DESCRIPTION": "Increase damage and #yBlock of a card by X."
   },
@@ -26,6 +28,13 @@
       "drain"
     ],
     "DESCRIPTION": "Deal damage displayed and heal equal to unblocked damage dealt."
+  },
+  {
+    "PROPER_NAME": "Recall",
+    "NAMES": [
+      "recall",
+      "recalled"
+    ],
+    "DESCRIPTION": "Put a number of cards from your discard pile to your hand."
   }
-
 ]
