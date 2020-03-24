@@ -24,7 +24,7 @@ public class ChillingGrasp
 
     public ChillingGrasp() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(5);
         exhaust = true;
         tags.add(CardTags.HEALING);
     }

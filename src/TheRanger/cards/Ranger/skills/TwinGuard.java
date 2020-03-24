@@ -20,7 +20,7 @@ public class TwinGuard
     public TwinGuard()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        setBlock(4);
+        setBlock(5);
         setMN(2);
     }
 

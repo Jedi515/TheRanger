@@ -23,7 +23,7 @@ public class CrimsonOffering
     public CrimsonOffering() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.NONE);
         exhaust = true;
-        setEMPValue(2);
+        setEMPValue(3);
     }
 
     @Override

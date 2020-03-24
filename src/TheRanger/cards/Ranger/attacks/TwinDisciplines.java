@@ -22,7 +22,7 @@ public class TwinDisciplines
     public TwinDisciplines() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         exhaust = true;
-        setDamage(6);
+        setDamage(7);
         tags.add(CardTags.HEALING);
     }
 

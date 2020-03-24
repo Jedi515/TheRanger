@@ -28,7 +28,7 @@ public class SignalArrow
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
-        setDamage(7);
+        setDamage(9);
         setMN(1);
         exhaust = true;
     }

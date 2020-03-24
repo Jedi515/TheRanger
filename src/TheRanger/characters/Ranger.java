@@ -1,5 +1,6 @@
 package TheRanger.characters;
 
+import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.cards.Ranger.attacks.CopperWave;
 import TheRanger.cards.Ranger.attacks.Strike;
 import TheRanger.cards.Ranger.skills.AlarmClock;
@@ -36,7 +37,7 @@ public class Ranger
         super(name, RANGER, orbTextures, "resources/theRanger/images/orb/vfx.png", null, null, null);
         this.dialogX = this.drawX + 0.0F * Settings.scale;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        this.initializeClass("resources/theRanger/images/character/42.png", null, null, "resources/theRanger/images/character/42.png", this.getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(3));
+        this.initializeClass("resources/theRanger/images/character/42.png", "resources/theRanger/images/character/shoulder2.png", "resources/theRanger/images/character/shoulder.png", "resources/theRanger/images/character/42.png", this.getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(3));
     }
 
     @Override
@@ -143,11 +144,13 @@ public class Ranger
 
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL};
+        return new AbstractGameAction.AttackEffect[]{RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),
+                RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),
+                RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect(),RangerCard.getRandomAttackEffect()};
     }
 
     @Override
     public String getVampireText() {
-        return "\"Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\\\"Join~ ~us~ ~brother,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\\\"~\"";
+        return "\"Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\\\"ONE~ ~OF~ ~US!~ ~ONE~ ~OF~ ~US!\\\"~\"";
     }
 }

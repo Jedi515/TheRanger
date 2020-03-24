@@ -46,7 +46,7 @@ public class EmpowerAction
         {
             if (isEmpowerable(c))
             {
-                returnGroup.addToTop(c);
+                returnGroup.addToBottom(c);
             }
         }
         return returnGroup;

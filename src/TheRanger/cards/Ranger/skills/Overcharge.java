@@ -22,7 +22,7 @@ public class Overcharge
 
     public Overcharge() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
-        setEMPValue(4);
+        setEMPValue(5);
         exhaust = true;
     }
 

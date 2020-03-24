@@ -24,7 +24,7 @@ public class Strike
     public Strike()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
-        setDamage(5);
+        setDamage(6);
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
     }

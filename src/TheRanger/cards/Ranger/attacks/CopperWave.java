@@ -23,15 +23,15 @@ public class CopperWave
     public CopperWave()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
-        setBlock(3);
-        setDamage(3);
+        setBlock(5);
+        setDamage(5);
     }
 
 
     @Override
     public void upgrade() {
-        upgradeBlock(1);
-        upgradeDamage(1);
+        upgradeBlock(2);
+        upgradeDamage(2);
         upgradeName();
     }
 

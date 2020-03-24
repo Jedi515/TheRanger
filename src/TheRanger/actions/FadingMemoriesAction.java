@@ -48,7 +48,6 @@ public class FadingMemoriesAction
                     AbstractCard cardToAdd = c.makeStatEquivalentCopy();
                     cardToAdd.isEthereal = true;
                     cardToAdd.exhaust = true;
-                    cardToAdd.glowColor = Color.RED.cpy();
                     if (p.hand.size() == BaseMod.MAX_HAND_SIZE)
                     {
                         p.drawPile.moveToDiscardPile(cardToAdd);
@@ -57,6 +56,7 @@ public class FadingMemoriesAction
                     {
                         p.drawPile.moveToHand(cardToAdd);
                     }
+                    cardToAdd.glowColor = Color.RED.cpy();
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 AbstractDungeon.player.hand.refreshHandLayout();

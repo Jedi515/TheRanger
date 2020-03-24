@@ -26,7 +26,7 @@ public class Defend
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.SELF);
         this.tags.add(CardTags.STARTER_DEFEND);
-        setBlock(4);
+        setBlock(5);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -23,7 +23,7 @@ public class CrystalStrike
     public CrystalStrike()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
-        setDamage(10);
+        setDamage(12);
         setBrittle(0);
         tags.add(CardTags.STRIKE);
     }

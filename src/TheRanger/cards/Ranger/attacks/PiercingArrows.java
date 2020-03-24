@@ -25,8 +25,8 @@ public class PiercingArrows
 
     public PiercingArrows()
     {
-        super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
-        setDamage(5);
+        super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        setDamage(7);
         isMultiDamage = true;
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
     }

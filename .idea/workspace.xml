@@ -7,41 +7,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/DrawCardsCallbackAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/RecallAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrimsonDemon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/TwinDisciplines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/FocusingShard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonOffering.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FreshOfferings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ObliviousCloak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Overcharge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ProgressDay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Rummage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/FocusingShardPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/images/orb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/Hemophilia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/HailOfArrows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/images/character/shoulder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/FadingMemoriesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/FadingMemoriesAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/EmpowerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/EmpowerAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/CrimsonSplitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/CrimsonSplitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Illuminate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Illuminate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Transfusion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Transfusion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/characters/Ranger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/characters/Ranger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/keywordStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/keywordStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/EmpowerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/EmpowerAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/FadingMemoriesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/FadingMemoriesAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonSplitter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonSplitter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ArrowStab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ArrowStab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ChillingGrasp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/ChillingGrasp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CopperWave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CopperWave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrimsonDemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrimsonDemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrystalStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrystalStrike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassArrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassDagger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassDagger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassSword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/HeavyArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/HeavyArrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/KissOfDeath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/KissOfDeath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/OneShot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/OneShot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/PiercingArrows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/PiercingArrows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Rally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Rally.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/RivershaperStrike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/RivershaperStrike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/RoughenFeathers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/RoughenFeathers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/SignalArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/SignalArrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Strike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Strike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/TwinDisciplines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/TwinDisciplines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Vengeance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/Vengeance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/VileFeast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/VileFeast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/AlarmClock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/AlarmClock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ArcaneSeer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ArcaneSeer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonApotheosis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonApotheosis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonOffering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonOffering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrystalShield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrystalShield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Defend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Defend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/EmpowerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/EmpowerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Illuminate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Illuminate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ObliviousCloak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/ObliviousCloak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Overcharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Overcharge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Transfusion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Transfusion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/TwinGuard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/TwinGuard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/characters/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/characters/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/keywordStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/keywordStrings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,16 +80,24 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="theranger" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/theRanger/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/theRanger/images/character" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\localization\eng" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images\character" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\512" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\1024" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\relics" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="TheRanger.actions" />
@@ -83,12 +105,8 @@
       <recent name="TheRanger.util" />
       <recent name="TheRanger.cards.Ranger.skills" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images" />
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\512" />
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\1024" />
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\relics" />
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\character" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\localization\eng" />
     </key>
   </component>
   <component name="RunDashboard">

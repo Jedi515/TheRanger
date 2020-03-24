@@ -23,7 +23,7 @@ public class RivershaperStrike
     public RivershaperStrike()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(4);
+        setDamage(6);
         tags.add(CardTags.STRIKE);
     }
 

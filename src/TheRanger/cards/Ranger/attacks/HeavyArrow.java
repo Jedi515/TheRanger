@@ -28,12 +28,12 @@ public class HeavyArrow
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
-        setEMPValue(-1);
-        setDamage(12);
+        setEMPValue(-2);
+        setDamage(15);
     }
     @Override
     public void upgrade() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 
     @Override

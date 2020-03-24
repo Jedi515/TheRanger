@@ -5,6 +5,8 @@ import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 @AutoAdd.Ignore
@@ -88,6 +90,11 @@ public abstract class RangerCard
         c.glowColor = Color.RED.cpy();
         c.exhaust = true;
         c.isEthereal = true;
+    }
+
+    public static AbstractGameAction.AttackEffect getRandomAttackEffect()
+    {
+        return AbstractGameAction.AttackEffect.values()[MathUtils.random(0, AbstractGameAction.AttackEffect.values().length-1)];
     }
 
     protected static String makeCardID(String ID_in)

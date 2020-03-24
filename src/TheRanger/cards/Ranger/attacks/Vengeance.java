@@ -28,7 +28,7 @@ public class Vengeance
     public Vengeance()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ENEMY);
-        setDamage(10);
+        setDamage(12);
         tags.add(CardTags.HEALING);
         exhaust = true;
     }
@@ -41,6 +41,7 @@ public class Vengeance
 
     @Override
     public void upgrade() {
+        upgradeName();
         upgradeBaseCost(2);
     }
 

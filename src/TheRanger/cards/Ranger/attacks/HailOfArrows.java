@@ -1,9 +1,10 @@
 package TheRanger.cards.Ranger.attacks;
 
 import TheRanger.cards.Ranger.RangerCard;
+import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
-import TheRanger.patches.EmpowerField;
 import TheRanger.patches.RangerCardTags;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,57 +12,33 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class GlassSword
+public class HailOfArrows
         extends RangerCard {
-    public static final String ID = makeCardID("GlassSword");
+    public static final String ID = makeCardID("HailOfArrows");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 1;
-    public static final int BASEDAMAGE = 8;
-    public static final int UPGRADE_DAMAGE = 2;
+    public static final int COST = 2;
 
-    public GlassSword() {
+    public HailOfArrows() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        setMN(2);
+        setDamage(5);
         isMultiDamage = true;
-        setDamage(BASEDAMAGE);
-        setBrittle(6);
+        isEthereal = true;
     }
 
     @Override
     public void upgrade() {
         upgradeName();
-        upgradeDamage(UPGRADE_DAMAGE);
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-    }
-
-    @Override
-    public void applyPowers() {
-        if (EmpowerField.EmpowerFieldItself.empowerValue.get(this) == this.brittle)
+        for (int i = 0; i < magicNumber; i++)
         {
-            baseDamage = BASEDAMAGE*2;
+            addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, getRandomAttackEffect()));
         }
-        else
-        {
-            baseDamage = BASEDAMAGE;
-        }
-        super.applyPowers();
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        if (EmpowerField.EmpowerFieldItself.empowerValue.get(this) == this.brittle)
-        {
-            baseDamage = BASEDAMAGE*2;
-        }
-        else
-        {
-            baseDamage = BASEDAMAGE;
-        }
-        super.calculateCardDamage(mo);
     }
 }

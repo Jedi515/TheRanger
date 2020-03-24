@@ -21,16 +21,16 @@ public class CrimsonApotheosis
     public CrimsonApotheosis()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.SELF);
-        setMN(9);
-        setEMPValue(magicNumber / 3);
+        setMN(8);
+        setEMPValue(magicNumber / 2);
         exhaust = true;
     }
 
     @Override
     public void upgrade() {
         upgradeName();
-        upgradeMagicNumber(6);
-        setEMPValue(magicNumber / 3);
+        upgradeMagicNumber(4);
+        setEMPValue(magicNumber / 2);
         isEmpoweringValueUpgraded = true;
     }
 

@@ -23,8 +23,7 @@ public class GlassDagger
     public GlassDagger()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        setMN(4);
-        setDamage(3);
+        setDamage(4);
         setBrittle(4);
     }
 

@@ -20,13 +20,13 @@ public class CrystalShield
     public CrystalShield()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        setBlock(10);
+        setBlock(11);
         setBrittle(0);
     }
 
     @Override
     public void upgrade() {
-        upgradeBlock(4);
+        upgradeBlock(3);
         upgradeName();
     }
 

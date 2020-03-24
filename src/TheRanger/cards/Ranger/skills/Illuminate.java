@@ -25,8 +25,8 @@ public class Illuminate
     public Illuminate()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        setEMPValue(2);
-        setBlock(6);
+        setEMPValue(3);
+        setBlock(8);
     }
 
     @Override

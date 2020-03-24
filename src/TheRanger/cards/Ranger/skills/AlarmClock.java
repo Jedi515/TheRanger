@@ -23,8 +23,8 @@ public class AlarmClock
     public AlarmClock()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.SELF);
-        setEMPValue(1);
-        setBlock(3);
+        setEMPValue(2);
+        setBlock(6);
     }
 
     @Override

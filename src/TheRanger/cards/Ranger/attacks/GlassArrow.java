@@ -30,7 +30,7 @@ public class GlassArrow
     @Override
     public void upgrade() {
         upgradeName();
-        upgradeDamage(4);
+        upgradeDamage(5);
         upgradeBrittle(1);
     }
 

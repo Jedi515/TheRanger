@@ -23,9 +23,9 @@ public class RoughenFeathers
     public RoughenFeathers()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(5);
         setEMPValue(1);
-        setMN(2);
+        setMN(3);
     }
 
     @Override

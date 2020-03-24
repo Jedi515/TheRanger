@@ -25,7 +25,7 @@ public class Transfusion
     public Transfusion()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.NONE);
-        setEMPValue(2);
+        setEMPValue(3);
     }
 
     @Override

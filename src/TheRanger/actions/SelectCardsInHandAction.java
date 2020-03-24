@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class SelectCardsInHandAction
     extends AbstractGameAction
@@ -67,7 +68,7 @@ public class SelectCardsInHandAction
 
             if (hand.stream().filter(predicate).count() <= amount && !anyNumber && !canPickZero)
             {
-                callback.accept(hand);
+                callback.accept(hand.stream().filter(predicate).collect(Collectors.toList()));
                 isDone = true;
                 return;
             }

@@ -1,4 +1,4 @@
-package TheRanger.cards.Ranger.attacks;
+package TheRanger.cards.Ranger.skills;
 
 import TheRanger.actions.EmpowerAction;
 import TheRanger.cards.Ranger.RangerCard;
@@ -21,13 +21,13 @@ public class Rally
     public Rally()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        setBlock(8);
+        setBlock(10);
         setEMPValue(1);
     }
 
     @Override
     public void upgrade() {
-        upgradeBlock(3);
+        upgradeBlock(2);
         upgradeName();
     }
 

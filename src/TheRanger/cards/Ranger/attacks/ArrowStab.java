@@ -25,7 +25,7 @@ public class ArrowStab
     public ArrowStab()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        setDamage(6);
+        setDamage(7);
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
     }
 

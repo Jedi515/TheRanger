@@ -37,7 +37,7 @@
   "jediranger:ArcaneSeer":
   {
     "NAME": "Arcane Seer",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you play a card with no Block or damage this turn, jediranger:Empower !M! the top card of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card with no Block or damage, jediranger:Empower !M! the top card of your draw pile."
   },
   "jediranger:FadingMemories":
   {
@@ -289,5 +289,15 @@
   {
     "NAME": "Twin Disciplines",
     "DESCRIPTION": "Drain !D!. NL Gain Temporary_HP equal to HP drained. NL Exhaust."
+  },
+  "jediranger:HailOfArrows":
+  {
+    "NAME": "Hail of Arrows",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies !M! times."
+  },
+  "jediranger:Hemophilia":
+  {
+    "NAME": "Hemophilia",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, jediranger:Empower -1 the top card of your draw pile."
   }
 }
