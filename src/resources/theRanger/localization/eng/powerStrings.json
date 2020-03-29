@@ -47,5 +47,11 @@
     "DESCRIPTIONS": [
       "If you don't have enough [E] to play a card you may spend #b3 HP for each [E] missing."
     ]
+  },
+  "jediranger:CrimsonRunePower": {
+    "NAME": "Crimson Rune",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP during your turn, apply #b%d #yVulnerable to a random enemy."
+    ]
   }
 }

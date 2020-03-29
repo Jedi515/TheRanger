@@ -4,7 +4,9 @@
     "NAMES": [
       "empower",
       "empowerable",
-      "Empowerable"
+      "Empowerable",
+      "empowered",
+      "Empowered"
     ],
     "DESCRIPTION": "Increase damage and #yBlock of a card by X."
   },

@@ -1,6 +1,7 @@
 package TheRanger.actions;
 
 import TheRanger.cards.Ranger.RangerCard;
+import TheRanger.interfaces.isEmpowerable;
 import TheRanger.interfaces.modifyEmpowerInterface;
 import TheRanger.patches.EmpowerField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -36,7 +37,7 @@ public class EmpowerAction
 
     public static boolean isEmpowerable(AbstractCard c)
     {
-        return (c.baseDamage > -1 || c.baseBlock > -1);
+        return (c instanceof isEmpowerable || c.baseDamage > -1 || c.baseBlock > -1);
     }
 
     public static CardGroup getEmpowerableCards(CardGroup group)
@@ -54,7 +55,7 @@ public class EmpowerAction
 
     public static void empowerCard(AbstractCard card, int amount)
     {
-        if ((card.baseDamage == -1) && (card.baseBlock == -1)) return;
+        if (!isEmpowerable(card)) return;
 
         int tmpEmp = amount;
 
@@ -74,6 +75,8 @@ public class EmpowerAction
         {
             if (r instanceof modifyEmpowerInterface) tmpEmp = ((modifyEmpowerInterface)r).modifyEmpower(card,tmpEmp);
         }
+
+        if (card instanceof modifyEmpowerInterface) tmpEmp = ((modifyEmpowerInterface)card).modifyEmpower(card, tmpEmp);
 
         EmpowerField.EmpowerFieldItself.empowerValue.set(card, EmpowerField.EmpowerFieldItself.empowerValue.get(card) + tmpEmp);
 

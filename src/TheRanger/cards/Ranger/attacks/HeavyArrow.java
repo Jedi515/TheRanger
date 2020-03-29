@@ -33,6 +33,7 @@ public class HeavyArrow
     }
     @Override
     public void upgrade() {
+        upgradeName();
         upgradeDamage(5);
     }
 

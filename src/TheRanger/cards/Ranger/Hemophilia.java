@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.MedicalKit;
 
 public class Hemophilia
         extends RangerCard {
@@ -21,12 +22,19 @@ public class Hemophilia
 
     public Hemophilia() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.STATUS, CardColor.COLORLESS, CardRarity.COMMON, CardTarget.NONE);
+        exhaust = true;
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
         addToBot(new EmpowerTopdeckAction(1, -1));
         addToTop(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m)
+    {
+        return p.hasRelic(MedicalKit.ID);
     }
 
     @Override

@@ -1,9 +1,9 @@
 package TheRanger.cards.Ranger.skills;
 
-import TheRanger.actions.DrawCardsCallbackAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
-import TheRanger.patches.RangerCardTags;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -30,8 +30,13 @@ public class ProgressDay
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardsCallbackAction(magicNumber, list -> {
-            list.forEach(c -> setCostForTurn(c.cost - 1));
-        }));
+        addToBot(new DrawCardAction(magicNumber,
+                new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        DrawCardAction.drawnCards.forEach(c -> c.setCostForTurn(c.cost - 1));
+                        isDone = true;
+                    }
+                }));
     }
 }

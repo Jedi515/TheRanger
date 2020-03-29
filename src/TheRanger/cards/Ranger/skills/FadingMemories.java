@@ -1,11 +1,13 @@
 package TheRanger.cards.Ranger.skills;
 
-import TheRanger.actions.FadingMemoriesAction;
+import TheRanger.actions.SelectCardAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -34,7 +36,25 @@ public class FadingMemories
     }
 
     @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        addToBot(new FadingMemoriesAction(this.magicNumber));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+//        addToBot(new FadingMemoriesAction(this.magicNumber));
+        addToBot(new SelectCardAction(AbstractDungeon.actionManager.cardsPlayedThisTurn, "", c -> !c.cardID.equals(this.cardID) , list ->{
+            list.forEach(c ->
+                    {
+                        AbstractCard crd = c.makeStatEquivalentCopy();
+                        if (p.hand.size() == BaseMod.MAX_HAND_SIZE)
+                        {
+                            p.drawPile.moveToDiscardPile(crd);
+                            makeEphemeral(crd);
+                            p.createHandIsFullDialog();
+                        }
+                        else
+                        {
+                            p.drawPile.moveToHand(crd);
+                            makeEphemeral(crd);
+                        }
+                    }
+                    );
+        }));
     }
 }
