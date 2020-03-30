@@ -41,27 +41,23 @@ public class GlassSword
 
     @Override
     public void applyPowers() {
+        int tmpBase = baseDamage;
         if (EmpowerField.EmpowerFieldItself.empowerValue.get(this) == this.brittle)
         {
-            baseDamage = BASEDAMAGE*2;
-        }
-        else
-        {
-            baseDamage = BASEDAMAGE;
+            baseDamage *= 2;
         }
         super.applyPowers();
+        baseDamage = tmpBase;
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        int tmpBase = baseDamage;
         if (EmpowerField.EmpowerFieldItself.empowerValue.get(this) == this.brittle)
         {
-            baseDamage = BASEDAMAGE*2;
-        }
-        else
-        {
-            baseDamage = BASEDAMAGE;
+            baseDamage *= 2;
         }
         super.calculateCardDamage(mo);
+        baseDamage = tmpBase;
     }
 }

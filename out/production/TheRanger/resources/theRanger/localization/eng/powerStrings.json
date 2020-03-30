@@ -53,5 +53,30 @@
     "DESCRIPTIONS": [
       "Whenever you lose HP during your turn, apply #b%d #yVulnerable to a random enemy."
     ]
+  },
+  "jediranger:HearthguardPower": {
+    "NAME": "Hearthguard",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yEmpower #b%d all cards in your hand."
+    ]
+  },
+  "jediranger:MakeshiftArmorPower": {
+    "NAME": "Makeshift Armor",
+    "DESCRIPTIONS": [
+      "Whenever a card is created during combat, gain #b%d #yBlock."
+    ]
+  },
+  "jediranger:MakeshiftSwordPower": {
+    "NAME": "Makeshift Sword",
+    "DESCRIPTIONS": [
+      "Whenever a card is created during combat, deal #b%d damage to ALL enemies."
+    ]
+  },
+  "jediranger:ExtraCopyPower": {
+    "NAME": "Extra Copy",
+    "DESCRIPTIONS": [
+      "The first time a card is created during combat, shuffle #b%d copy of it into your draw pile.",
+      "The first time a card is created during combat, shuffle #b%d copies of it into your draw pile."
+    ]
   }
 }

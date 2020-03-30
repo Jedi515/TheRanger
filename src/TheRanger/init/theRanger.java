@@ -2,6 +2,7 @@ package TheRanger.init;
 
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.characters.Ranger;
+import TheRanger.interfaces.onGenerateCardMidcombatInterface;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.relics.RangerRelic;
 import TheRanger.variables.BrittleVariable;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
@@ -161,5 +163,11 @@ public class theRanger
                         (c.rarity == AbstractCard.CardRarity.RARE) &&
                         (!c.hasTag(AbstractCard.CardTags.HEALING))
                 ).forEach(c -> remembranceCards.addToTop(c.makeCopy()));
+    }
+
+    public static void onGenerateCardMidcombat(AbstractCard c)
+    {
+        AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
+        AbstractDungeon.player.powers.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
     }
 }

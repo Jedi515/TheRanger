@@ -1,6 +1,7 @@
 package TheRanger.cards.Ranger;
 
 import TheRanger.init.theRanger;
+import TheRanger.patches.EmpowerField;
 import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
@@ -87,6 +88,7 @@ public abstract class RangerCard
 
     public static void makeEphemeral(AbstractCard c)
     {
+        EmpowerField.EmpowerFieldItself.rangerEphemeral.set(c, true);
         c.glowColor = Color.RED.cpy();
         c.exhaust = true;
         c.isEthereal = true;

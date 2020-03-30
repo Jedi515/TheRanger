@@ -32,6 +32,7 @@ public class FlashFreeze
     public void upgrade()
     {
         upgradeName();
+        upgradeBaseCost(0);
     }
 
     @Override

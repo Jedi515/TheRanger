@@ -4,6 +4,7 @@ import TheRanger.actions.SelectCardAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
 import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,17 +43,8 @@ public class FadingMemories
             list.forEach(c ->
                     {
                         AbstractCard crd = c.makeStatEquivalentCopy();
-                        if (p.hand.size() == BaseMod.MAX_HAND_SIZE)
-                        {
-                            p.drawPile.moveToDiscardPile(crd);
-                            makeEphemeral(crd);
-                            p.createHandIsFullDialog();
-                        }
-                        else
-                        {
-                            p.drawPile.moveToHand(crd);
-                            makeEphemeral(crd);
-                        }
+                        makeEphemeral(crd);
+                        addToBot(new MakeTempCardInHandAction(crd));
                     }
                     );
         }));

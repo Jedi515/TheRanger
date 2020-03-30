@@ -351,5 +351,26 @@
       " NL Gain !M! Strength.",
       " NL Deal !D! damage to ALL enemies."
     ]
+  },
+  "jediranger:Hearthguard":
+  {
+    "NAME": "Hearthguard",
+    "DESCRIPTION": "At the start of your turn, jediranger:Empower !M! all cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, jediranger:Empower !M! all cards in your hand."
+  },
+  "jediranger:MakeshiftArmor":
+  {
+    "NAME": "Makeshift Armor",
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! Block."
+  },
+  "jediranger:MakeshiftSword":
+  {
+    "NAME": "Makeshift Sword",
+    "DESCRIPTION": "Whenever a card is created during combat, deal !M! damage to ALL enemies."
+  },
+  "jediranger:ExtraCopy":
+  {
+    "NAME": "Extra Copy",
+    "DESCRIPTION": "The first time a card is created during combat, shuffle !M! additional copy of it into your draw pile."
   }
 }

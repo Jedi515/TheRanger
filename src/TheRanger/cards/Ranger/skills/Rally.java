@@ -22,7 +22,7 @@ public class Rally
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
         setBlock(10);
-        setEMPValue(1);
+        setEMPValue(2);
     }
 
     @Override

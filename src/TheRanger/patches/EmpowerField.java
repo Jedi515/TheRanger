@@ -1,8 +1,10 @@
 package TheRanger.patches;
 
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,11 +19,13 @@ public class EmpowerField
     @SpirePatch(clz = AbstractCard.class, method = SpirePatch.CLASS)
     public static class EmpowerFieldItself
     {
+        public static SpireField<Boolean> rangerEphemeral = new SpireField<>(() -> false);
         public static SpireField<Integer> empowerValue = new SpireField<Integer>(() -> 0);
 
         @SpirePatch(clz=AbstractCard.class, method="makeStatEquivalentCopy")
         public static class MakeStatEquivalentCopy {
             public static AbstractCard Postfix(AbstractCard result, AbstractCard self) {
+                rangerEphemeral.set(result, rangerEphemeral.get(self));
                 empowerValue.set(result, empowerValue.get(self));
                 return result;
             }
@@ -97,5 +101,20 @@ public class EmpowerField
         }
     }
 
-
+    @SpirePatch(clz = CardGroup.class, method = "glowCheck")
+    public static class GlowCheck
+    {
+        public static void Postfix(CardGroup __instance)
+        {
+            if (__instance == AbstractDungeon.player.hand)
+            {
+                __instance.group.stream().filter(c -> EmpowerFieldItself.rangerEphemeral.get(c)).forEach(c ->
+                {
+                    c.glowColor = Color.RED.cpy();
+                    if (!c.exhaust) c.exhaust = true;
+                    if (!c.isEthereal) c.isEthereal = true;
+                });
+            }
+        }
+    }
 }
