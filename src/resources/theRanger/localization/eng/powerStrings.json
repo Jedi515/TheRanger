@@ -57,7 +57,7 @@
   "jediranger:HearthguardPower": {
     "NAME": "Hearthguard",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yEmpower #b%d all cards in your hand."
+      "At the start of your turn, #yEmpower #b%d all cards in your hand and lose #b%d HP for each card #yEmpowered."
     ]
   },
   "jediranger:MakeshiftArmorPower": {
@@ -75,8 +75,14 @@
   "jediranger:ExtraCopyPower": {
     "NAME": "Extra Copy",
     "DESCRIPTIONS": [
-      "The first time a card is created during combat, shuffle #b%d copy of it into your draw pile.",
-      "The first time a card is created during combat, shuffle #b%d copies of it into your draw pile."
+      "The first time each turn a card is created, shuffle #b%d copy of it into your draw pile.",
+      "The first time each turn a card is created, shuffle #b%d copies of it into your draw pile."
+    ]
+  },
+  "jediranger:CrimsonRealityPower": {
+    "NAME": "Crimson Reality",
+    "DESCRIPTIONS": [
+      "Whenever a card is created during combat, lose HP equal to its cost and #yUpgrade it."
     ]
   }
 }

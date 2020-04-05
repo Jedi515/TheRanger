@@ -8,7 +8,7 @@
       "empowered",
       "Empowered"
     ],
-    "DESCRIPTION": "Increase damage and #yBlock of a card by X."
+    "DESCRIPTION": "Increase damage and #yBlock of a card by X until that card is played."
   },
   {
     "PROPER_NAME": "Brittle",
@@ -22,12 +22,13 @@
     "NAMES": [
       "ephemeral"
     ],
-    "DESCRIPTION": "Ephemeral cards #yExhaust when played and are #yEthereal [REMOVE_SPACE]."
+    "DESCRIPTION": "Ephemeral cards #yExhaust when played and are #yEthereal."
   },
   {
     "PROPER_NAME": "Drain",
     "NAMES": [
-      "drain"
+      "drain",
+      "drained"
     ],
     "DESCRIPTION": "Deal damage displayed and heal equal to unblocked damage dealt."
   },

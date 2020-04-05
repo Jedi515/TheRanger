@@ -26,7 +26,7 @@ public class ExtraCopyPower
         this.owner = owner;
         amount = copiesNumber;
         updateDescription();
-        loadRegion("dexterity");
+        loadRegion("master_reality");
         canTrigger = false;
     }
 
@@ -48,7 +48,10 @@ public class ExtraCopyPower
     @Override
     public void onCreateCard(AbstractCard card)
     {
-        addToBot(new MakeTempCardInDrawPileAction(card.makeSameInstanceOf(), amount, true, true));
-        canTrigger = false;
+        if (canTrigger)
+        {
+            addToBot(new MakeTempCardInDrawPileAction(card.makeSameInstanceOf(), amount, true, true));
+            canTrigger = false;
+        }
     }
 }

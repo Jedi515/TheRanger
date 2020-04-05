@@ -137,7 +137,7 @@ public class theRanger
         loadCustomStrings(CardStrings.class, GetLocString(langKey, "cardStrings"));
         loadCustomStrings(RelicStrings.class, GetLocString(langKey, "relicStrings"));
         loadCustomStrings(PowerStrings.class, GetLocString(langKey, "powerStrings"));
-//        loadCustomStrings(CharacterStrings.class, GetLocString(langKey, "characterStrings"));
+        loadCustomStrings(CharacterStrings.class, GetLocString(langKey, "characterStrings"));
         loadCustomStrings(UIStrings.class, GetLocString(langKey, "UIStrings"));
 //        loadCustomStrings(PotionStrings.class, GetLocString(langKey, "potionStrings"));
     }
@@ -169,5 +169,9 @@ public class theRanger
     {
         AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
         AbstractDungeon.player.powers.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
+        if (c instanceof onGenerateCardMidcombatInterface)
+        {
+            ((onGenerateCardMidcombatInterface)c).onCreateCard(c);
+        }
     }
 }

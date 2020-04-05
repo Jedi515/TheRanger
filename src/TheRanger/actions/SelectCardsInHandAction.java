@@ -22,6 +22,26 @@ public class SelectCardsInHandAction
     private ArrayList<AbstractCard> hand;
     private ArrayList<AbstractCard> tempHand;
 
+    /**
+    * @param amount - max number of cards player can select
+    * @param textForSelect - text that will be displayed at the top of the screen. It will be automatically attached to base game "Select X card/s to " text
+    * @param anyNumber - whether player has to select exact number of cards or any number up to.
+    * false for exact number
+    * @param canPickZero - whether player can skip selection by picking zero cards.
+    * @param cardFilter - filter that will be applied to cards in hand.
+    * Example: if you want to display only skills, it would be c -> c.type == CardType.SKILL
+    * If you don't need the filter, set it as c -> true
+    * @param callback - What to do with cards selected.
+    * Example: if you want to lose 1 hp and upgrade each card selected, it would look like
+    * list -> {
+    * addToBot(
+    * new LoseHPAction(player, player, list.size());
+    * list.forEach(c -> c.upgrade());
+    * )}
+    *
+    * if there's no callback the action will not trigger simply because you told player to "select cards to do nothing with them"
+    * */
+
     public SelectCardsInHandAction(int amount, String textForSelect, boolean anyNumber, boolean canPickZero, Predicate<AbstractCard> cardFilter, Consumer<List<AbstractCard>> callback)
     {
         this.amount = amount;
@@ -69,6 +89,8 @@ public class SelectCardsInHandAction
             if (hand.stream().filter(predicate).count() <= amount && !anyNumber && !canPickZero)
             {
                 callback.accept(hand.stream().filter(predicate).collect(Collectors.toList()));
+                AbstractDungeon.player.hand.refreshHandLayout();
+                AbstractDungeon.player.hand.applyPowers();
                 isDone = true;
                 return;
             }

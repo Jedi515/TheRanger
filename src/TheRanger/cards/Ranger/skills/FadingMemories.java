@@ -1,9 +1,8 @@
 package TheRanger.cards.Ranger.skills;
 
-import TheRanger.actions.SelectCardAction;
+import TheRanger.actions.SelectCardsAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,7 +38,7 @@ public class FadingMemories
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 //        addToBot(new FadingMemoriesAction(this.magicNumber));
-        addToBot(new SelectCardAction(AbstractDungeon.actionManager.cardsPlayedThisTurn, "", c -> !c.cardID.equals(this.cardID) , list ->{
+        addToBot(new SelectCardsAction(AbstractDungeon.actionManager.cardsPlayedThisTurn, "", c -> !c.cardID.equals(this.cardID) , list ->{
             list.forEach(c ->
                     {
                         AbstractCard crd = c.makeStatEquivalentCopy();

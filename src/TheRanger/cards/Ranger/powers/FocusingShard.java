@@ -20,7 +20,7 @@ public class FocusingShard
     public static final int COST = 1;
 
     public FocusingShard() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.SELF);
         setMN(1);
     }
 

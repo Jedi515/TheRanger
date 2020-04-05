@@ -355,8 +355,8 @@
   "jediranger:Hearthguard":
   {
     "NAME": "Hearthguard",
-    "DESCRIPTION": "At the start of your turn, jediranger:Empower !M! all cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, jediranger:Empower !M! all cards in your hand."
+    "DESCRIPTION": "At the start of your turn, jediranger:Empower !M! all cards in your hand and lose !M! HP for each card jediranger:Empowered.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, jediranger:Empower !M! all cards in your hand and lose !M! HP for each card jediranger:Empowered."
   },
   "jediranger:MakeshiftArmor":
   {
@@ -371,6 +371,54 @@
   "jediranger:ExtraCopy":
   {
     "NAME": "Extra Copy",
-    "DESCRIPTION": "The first time a card is created during combat, shuffle !M! additional copy of it into your draw pile."
+    "DESCRIPTION": "The first time each turn a card is created during combat, shuffle !M! additional copy of it into your draw pile."
+  },
+  "jediranger:CopyCat":
+  {
+    "NAME": "CopyCat",
+    "DESCRIPTION": "Draw !M! card. NL If this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1.",
+    "EXTENDED_DESCRIPTION": [
+      " NL Exhaust.",
+      "Draw !M! cards. NL If this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1."
+    ]
+  },
+  "jediranger:CrimsonReality":
+  {
+    "NAME": "Crimson Reality",
+    "DESCRIPTION": "Whenever a card is created during combat, lose HP equal to its cost and Upgrade it."
+  },
+  "jediranger:InfinityStrike":
+  {
+    "NAME": "Infinity Strike",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, permanently increase the damage of ALL *Infinity *Strikes by the number of *Infinity *Strikes. NL Exhaust."
+  },
+  "jediranger:BalancedArrow":
+  {
+    "NAME": "Balanced Arrow",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust if jediranger:Empowered."
+  },
+  "jediranger:SiphonPower":
+  {
+    "NAME": "Siphon Power",
+    "DESCRIPTION": "Choose a card in hand to Exhaust. NL If it is jediranger:Empowered, remove all jediranger:Empower and gain that much [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust."
+    ]
+  },
+  "jediranger:CrimsonArmor":
+  {
+    "NAME": "Crimson Armor",
+    "DESCRIPTION": "Gain !M! Temporary_HP X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Temporary_HP X times. NL Affected by Block modifiers."
+  },
+  "jediranger:SpinningAxe":
+  {
+    "NAME": "Spinning Axe",
+    "DESCRIPTION": "Deal !D! damage. NL If this deals unblocked damage, draw a card and shuffle this card back to your draw pile."
+  },
+  "jediranger:CrimsonBreath":
+  {
+    "NAME": "Crimson Breath",
+    "DESCRIPTION": "Apply !M! Weak to each enemy that intends to attack and !M! Vulnerable to others."
   }
 }

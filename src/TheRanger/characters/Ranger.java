@@ -5,6 +5,7 @@ import TheRanger.cards.Ranger.attacks.CopperWave;
 import TheRanger.cards.Ranger.attacks.Strike;
 import TheRanger.cards.Ranger.skills.AlarmClock;
 import TheRanger.cards.Ranger.skills.Defend;
+import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.relics.RegularQuiver;
 import basemod.abstracts.CustomPlayer;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
@@ -29,8 +31,8 @@ import static com.badlogic.gdx.graphics.Color.TEAL;
 public class Ranger
     extends CustomPlayer
 {
-    public static String[] orbTextures = new String[]{"resources/theRanger/images/orb/layer1.png", "resources/theRanger/images/orb/layer2.png", "resources/theRanger/images/orb/layer3.png", "resources/theRanger/images/orb/layer4.png", "resources/theRanger/images/orb/layer5.png", "resources/theRanger/images/orb/layer6.png", "resources/theRanger/images/orb/layer1d.png", "resources/theRanger/images/orb/layer2d.png", "resources/theRanger/images/orb/layer3d.png", "resources/theRanger/images/orb/layer4d.png", "resources/theRanger/images/orb/layer5d.png"};
-
+    private static String[] orbTextures = new String[]{"resources/theRanger/images/orb/layer1.png", "resources/theRanger/images/orb/layer2.png", "resources/theRanger/images/orb/layer3.png", "resources/theRanger/images/orb/layer4.png", "resources/theRanger/images/orb/layer5.png", "resources/theRanger/images/orb/layer6.png", "resources/theRanger/images/orb/layer1d.png", "resources/theRanger/images/orb/layer2d.png", "resources/theRanger/images/orb/layer3d.png", "resources/theRanger/images/orb/layer4d.png", "resources/theRanger/images/orb/layer5d.png"};
+    private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(theRanger.makeID("Ranger"));
 
     public Ranger(String name)
     {
@@ -71,14 +73,12 @@ public class Ranger
 
     @Override
     public CharSelectInfo getLoadout() {
-        String title = "A man with bow and shortswords";
-        String flavor = "Why are we still here?.. Just to suffer?..";
-        return new CharSelectInfo(title, flavor, 80, 80, 0, 99, 5, this, this.getStartingRelics(), this.getStartingDeck(), false);
+        return new CharSelectInfo(characterStrings.NAMES[0], characterStrings.TEXT[0], 80, 80, 0, 99, 5, this, this.getStartingRelics(), this.getStartingDeck(), false);
     }
 
     @Override
     public String getTitle(PlayerClass playerClass) {
-        return "The Ranger";
+        return characterStrings.NAMES[1];
     }
 
     @Override
@@ -114,17 +114,17 @@ public class Ranger
     @Override
     public void doCharSelectScreenSelectEffect()
     {
-        CardCrawlGame.sound.playA("STS_SFX_DaggerThrow_1.ogg", MathUtils.random(-0.2f, 0.2f));
+        CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "STS_SFX_DaggerThrow_1.ogg";
+        return "BLOOD_SPLAT";
     }
 
     @Override
     public String getLocalizedCharacterName() {
-        return "The Ranger";
+        return characterStrings.NAMES[0];
     }
 
     @Override
@@ -134,7 +134,7 @@ public class Ranger
 
     @Override
     public String getSpireHeartText() {
-        return "You aim your bow and ready your arrows...";
+        return characterStrings.TEXT[1];
     }
 
     @Override
@@ -151,6 +151,6 @@ public class Ranger
 
     @Override
     public String getVampireText() {
-        return "\"Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\\\"ONE~ ~OF~ ~US!~ ~ONE~ ~OF~ ~US!\\\"~\"";
+        return characterStrings.TEXT[2];
     }
 }

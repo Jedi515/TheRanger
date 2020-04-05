@@ -26,6 +26,7 @@ public class RegularQuiver
 
     @Override
     public void atBattleStart() {
+        flash();
         addToBot(new MakeTempCardInHandAction(arrowPool.getRandomCard(true).makeCopy()));
 //        addToBot(new CustomDiscoveryAction(arrowPool, 3));
     }

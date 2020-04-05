@@ -117,4 +117,13 @@ public class EmpowerField
             }
         }
     }
+
+    @SpirePatch(clz = AbstractPlayer.class, method = "useCard")
+    public static class RemoveOnPlay
+    {
+        public static void Postfix(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse)
+        {
+            EmpowerFieldItself.empowerValue.set(c, 0);
+        }
+    }
 }

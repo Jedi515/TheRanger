@@ -7,45 +7,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/ExtraCopy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/Hearthguard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/MakeshiftArmor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/MakeshiftSword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/interfaces/onGenerateCardMidcombatInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/patches/TempCardPatches.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/ExtraCopyPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/HearthguardPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/MakeshiftArmorPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/MakeshiftSwordPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/DamageCallbackAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/BalancedArrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/InfinityStrike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/SpinningAxe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/CrimsonReality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CopyCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonArmor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/CrimsonBreath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/SiphonPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/patches/RenderEmpowerPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/patches/VampiresHPPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonRealityPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/relics/CursedBlood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/relics/GrindingWheel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/relics/SharpFang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/characterStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/RangerCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/attacks/GlassSword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/attacks/GlassSword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/actions/SelectCardsInHandAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/attacks/CrimsonDemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/attacks/CrimsonDemon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/powers/FocusingShard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/powers/FocusingShard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/FadingMemories.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/FadingMemories.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/FlashFreeze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/FlashFreeze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Rally.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/Rally.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/SoulSplitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/cards/Ranger/skills/SoulSplitter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/characters/Ranger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/characters/Ranger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/init/theRanger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$APSingleTargetDamageModify.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$APSingleTargetDamageModify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$CCDSingleTargetDamageModify.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$CCDSingleTargetDamageModify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorPowers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorPowers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorRelics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorRelics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorSecondRelics.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$LocatorSecondRelics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$MakeStatEquivalentCopy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$MakeStatEquivalentCopy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$modifyBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself$modifyBlock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField$EmpowerFieldItself.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/patches/EmpowerField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/ExtraCopyPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/ExtraCopyPower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/HearthguardPower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/powers/HearthguardPower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/relics/RegularQuiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/relics/RegularQuiver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/util/TextureLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/TheRanger/util/TextureLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/keywordStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/keywordStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/powerStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/GlassSword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/relicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/relicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsInHandAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrimsonDemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/attacks/CrimsonDemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/FocusingShard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/powers/FocusingShard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FadingMemories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FadingMemories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FlashFreeze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FlashFreeze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Rally.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/Rally.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/characters/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/characters/Ranger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/init/theRanger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/patches/EmpowerField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/patches/EmpowerField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/ExtraCopyPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/ExtraCopyPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/HearthguardPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/HearthguardPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/relics/RegularQuiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/relics/RegularQuiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/util/TextureLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/util/TextureLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/keywordStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/keywordStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/relicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/relicStrings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +86,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="theranger" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/theRanger/images/character" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/theRanger/images" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -84,8 +94,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images\character" />
       <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images" />
+      <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\theRanger\images\character" />
       <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\512" />
       <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\1024" />
       <recent name="C:\Users\Jedi515\IdeaProjects\TheRanger\src\resources\images\relics" />
