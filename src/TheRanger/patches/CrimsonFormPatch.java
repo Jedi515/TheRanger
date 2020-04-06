@@ -1,8 +1,11 @@
 package TheRanger.patches;
 
 import TheRanger.powers.CrimsonFormPower;
+import TheRanger.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.blights.AbstractBlight;
@@ -16,12 +19,15 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
+import javassist.expr.MethodCall;
 
 import java.util.ArrayList;
 
 
 public class CrimsonFormPatch
 {
+    private static Texture hpTexture = TextureLoader.getTexture("resources/theRanger/images/panelHeart.png");
+    public static TextureAtlas.AtlasRegion hpRegion = new TextureAtlas.AtlasRegion(hpTexture, 0, 0, hpTexture.getWidth(), hpTexture.getHeight());
     private static Color ENERGY_COST_RESTRICTED_COLOR =
             Color.SALMON.cpy();
 //            new Color(1.0F, 0.6F, 0.6F, 1.0F);
@@ -42,11 +48,24 @@ public class CrimsonFormPatch
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class RedColorEnergy
     {
-//        public static ExprEditor Instrument() {
-//            return new ExprEditor() {
-//                //render HP icon here "D:/Steam/SteamApps/common/SlayTheSpire/desktop-1.0.jar!/images/ui/topPanel/panelHeart.png"
-//            };
-//        }
+        public static ExprEditor Instrument() {
+            return new ExprEditor() {
+                @Override
+                public void edit(MethodCall m) throws CannotCompileException
+                {
+                    if (m.getMethodName().equals("renderHelper"))
+                    {
+                        m.replace("{if ((" + AbstractDungeon.class.getName() + ".player != null) && (" + AbstractDungeon.class.getName() + ".player.hand.contains(this)) &&" +
+                                " (this.costForTurn > " + EnergyPanel.class.getName() + ".getCurrentEnergy())  && " +
+                                "(" + AbstractDungeon.class.getName() + ".player.hasPower(" + CrimsonFormPower.class.getName() + ".POWER_ID)))" +
+                                "{" +
+                                "$3 = " + CrimsonFormPatch.class.getName() + ".hpRegion;" +
+                                "}" +
+                                "$proceed($$);}");
+                    }
+                }
+            };
+        }
 
         @SpireInsertPatch(locator = Locator.class, localvars = {"costColor"})
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef Color[] costColor)

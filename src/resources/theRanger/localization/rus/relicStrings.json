@@ -1,0 +1,51 @@
+{
+  "jediranger:dummy":
+  {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      ""
+    ]
+  },
+  "jediranger:Amplifier":
+  {
+    "NAME": "Amplifier",
+    "FLAVOR": "20% cooler, 80% heater.",
+    "DESCRIPTIONS": [
+      "Whenever you #yjediranger:Empower a card, #yjediranger:Empower it by #b%d more."
+    ]
+  },
+  "jediranger:RegularQuiver":
+  {
+    "NAME": "Regular Quiver",
+    "FLAVOR": "It actually tastes a bit salty and metallic. Why did you lick a quiver again?",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a random #ycommon card containing #y\"Arrow\" to your hand.",
+      "At the start of each combat, choose #b1 of #b3 cards containing #y\"Arrow\" to add to your hand."
+    ]
+  },
+  "jediranger:SharpFang":
+  {
+    "NAME": "SharpFang",
+    "FLAVOR": "It's actually just a glorified drinking straw.",
+    "DESCRIPTIONS": [
+      "Whenever you successfully #yjediranger:Drain [REMOVE_SPACE], heal #b1 HP."
+    ]
+  },
+  "jediranger:GrindingWheel":
+  {
+    "NAME": "Grinding Wheel",
+    "FLAVOR": "Too old and used up for your entire weapon, but has just enough power to sharpen the tip.",
+    "DESCRIPTIONS": [
+      "Whenever you shuffle your draw pile, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
+    ]
+  },
+  "jediranger:CursedBlood":
+  {
+    "NAME": "Cursed Blood",
+    "FLAVOR": "You suddenly feel a disturbing lack of crimson liquid in your body.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. At the start of each battle, #yjediranger:Empower #r%d ALL cards."
+    ]
+  }
+}
