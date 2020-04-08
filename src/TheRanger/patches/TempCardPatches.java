@@ -26,14 +26,14 @@ public class TempCardPatches
         }
     }
 
-    @SpirePatch(clz = MakeTempCardInHandAction.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {AbstractCard.class, boolean.class})
-    @SpirePatch(clz = MakeTempCardInDiscardAction.class, method = SpirePatch.CONSTRUCTOR, paramtypez = {AbstractCard.class, boolean.class})
+    @SpirePatch(clz = MakeTempCardInDiscardAction.class, method = "makeNewCard")
+    @SpirePatch(clz = MakeTempCardInHandAction.class, method = "makeNewCard")
     public static class InHandOrDiscard
     {
-        @SpireInsertPatch(locator =  Locator.class, localvars = {"c"})
-        public static void Insert(AbstractGameAction __instance, AbstractCard card, boolean whatever, AbstractCard c)
+        public static AbstractCard Postfix(AbstractCard __result, AbstractGameAction __instance)
         {
-            theRanger.onGenerateCardMidcombat(c);
+            theRanger.onGenerateCardMidcombat(__result);
+            return __result;
         }
     }
 

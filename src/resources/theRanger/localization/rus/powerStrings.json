@@ -1,88 +1,88 @@
 {
   "jediranger:ArcaneSeer": {
-    "NAME": "Arcane Seer",
+    "NAME": "Тайный пророк",
     "DESCRIPTIONS": [
-      "When you play a card with no damage and #yBlock, #yEmpower #b%d the top card of your draw pile."
+      "#yjediranger:Усиляет #b%d верхнюю карту стопки добора, когда вы разыгрываете карту без урона и #yЗащиты в этом ходу."
     ]
   },
   "jediranger:DamageEndOfNextTurnPower": {
-    "NAME": "End of Next Turn Damage",
+    "NAME": "Урон в конце след. хода",
     "DESCRIPTIONS": [
-      "At the end of next turn, take #b%d damage."
+      "Получит #b%d урона в конце след. хода."
     ]
   },
   "jediranger:DamageEndOfThisTurnPower": {
-    "NAME": "End of Turn Damage",
+    "NAME": "Урон в конце этого хода",
     "DESCRIPTIONS": [
-      "At the end of this turn, take #b%d damage."
+      "Получит #b%d урона в конце этого хода"
     ]
   },
   "jediranger:CrimsonPrinterPower": {
-    "NAME": "Crimson Printer",
+    "NAME": "Алый писец",
     "DESCRIPTIONS": [
-      "Shuffle a copy of the first card you play each turn into your draw pile and lose HP equal to its cost.",
-      "Shuffle a copy of the first #b%d cards you play each turn into your draw pile and lose HP equal to its cost."
+      "Отнимает ОЗ, равную стоимости первой разыгранной в каждом ходу карты и замешивает её копию в стопку добора.",
+      "Отнимает ОЗ, равную стоимости первых разыгранных в каждом ходу #b%d карт и замешивает её копию в стопку добора."
     ]
   },
-  "jediranger:EnchantedQuiverPower": {
-    "NAME": "Enchanted Quiver",
+  "jediranger:EnchantedArrowsPower": {
+    "NAME": "Зачарованные стрелы",
     "DESCRIPTIONS": [
-      "Cards containing \"Arrow\" deal #b%d additional damage."
+      "Карты, содержащие «Стрела» в названии, наносят #b%d доп. урона."
     ]
   },
   "jediranger:CrimsonHarvestPower": {
-    "NAME": "Crimson Harvest",
+    "NAME": "Алая жатва",
     "DESCRIPTIONS": [
-      "Whenever you kill a non-minion enemy, heal #b%d HP."
+      "Восполняет #b%d ОЗ, когда вы убиваете врага (кроме прислужников)."
     ]
   },
   "jediranger:LastGloryPower": {
-    "NAME": "Last Glory",
+    "NAME": "Последний триумф",
     "DESCRIPTIONS": [
-      "Whenever a card is #yExhausted, #yEmpower #b%d the top #b%d cards of your draw pile."
+      "#yУсиляет на #b%d верхние #b%d карты стопки добора, когда Сжигается карта."
     ]
   },
   "jediranger:CrimsonFormPower": {
-    "NAME": "Crimson Form",
+    "NAME": "Алый облик",
     "DESCRIPTIONS": [
-      "If you don't have enough [E] to play a card you may spend #b3 HP for each [E] missing."
+      "Если у вас недостаточно [E] [REMOVE_SPACE], чтобы разыграть карту, вы можете потратить 3 ОЗ за каждую недостающую [E]."
     ]
   },
   "jediranger:CrimsonRunePower": {
-    "NAME": "Crimson Rune",
+    "NAME": "Алая руна",
     "DESCRIPTIONS": [
-      "Whenever you lose HP during your turn, apply #b%d #yVulnerable to a random enemy."
+      "Накладывает #b%d #yУязвимости на случайного врага, когда вы теряете ОЗ в течение своего хода."
     ]
   },
   "jediranger:HearthguardPower": {
     "NAME": "Hearthguard",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yEmpower #b%d all cards in your hand and lose #b%d HP for each card #yEmpowered."
+      "#yУсиляет на #b%d все карты в руке и отнимает #r%d ОЗ за каждую #yУсиленную карту в начале вашего хода."
     ]
   },
   "jediranger:MakeshiftArmorPower": {
-    "NAME": "Makeshift Armor",
+    "NAME": "Кустарный доспех",
     "DESCRIPTIONS": [
-      "Whenever a card is created during combat, gain #b%d #yBlock."
+      "Даёт #b%d #yЗащиты при создании карты в бою."
     ]
   },
   "jediranger:MakeshiftSwordPower": {
-    "NAME": "Makeshift Sword",
+    "NAME": "Кустарный меч",
     "DESCRIPTIONS": [
-      "Whenever a card is created during combat, deal #b%d damage to ALL enemies."
+      "Наносит #b%d урона ВСЕМ врагам при создании карты в бою."
     ]
   },
   "jediranger:ExtraCopyPower": {
     "NAME": "Extra Copy",
     "DESCRIPTIONS": [
-      "The first time each turn a card is created, shuffle #b%d copy of it into your draw pile.",
-      "The first time each turn a card is created, shuffle #b%d copies of it into your draw pile."
+      "Замешивает в стопку добора #b%d копию первой создаваемой в каждом ходу карты.",
+      "Замешивает в стопку добора #b%d копий первой создаваемой в каждом ходу карты."
     ]
   },
   "jediranger:CrimsonRealityPower": {
-    "NAME": "Crimson Reality",
+    "NAME": "Алая реальность",
     "DESCRIPTIONS": [
-      "Whenever a card is created during combat, lose HP equal to its cost and #yUpgrade it."
+      "Добавленные карты отнимают ОЗ, равную своей стоимости, и #yУлучшаются."
     ]
   }
 }

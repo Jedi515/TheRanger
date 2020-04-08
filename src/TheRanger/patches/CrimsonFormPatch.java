@@ -85,7 +85,7 @@ public class CrimsonFormPatch
         {
             AbstractPlayer p = AbstractDungeon.player;
             if (p == null || __result || !p.hasPower(CrimsonFormPower.POWER_ID)) return __result;
-            if (p.hasPower(EntanglePower.POWER_ID) && (__instance.type == AbstractCard.CardType.ATTACK)) return __result;
+            if (p.hasPower(EntanglePower.POWER_ID) && (__instance.type == AbstractCard.CardType.ATTACK)) return false;
 
             for (AbstractRelic relic : p.relics) if (!relic.canPlay(__instance)) return false;
             for (AbstractPower pow : p.powers) if (!pow.canPlayCard(__instance)) return false;

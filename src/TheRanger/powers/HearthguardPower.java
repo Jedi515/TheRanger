@@ -1,6 +1,7 @@
 package TheRanger.powers;
 
 import TheRanger.actions.EmpowerAction;
+import TheRanger.actions.LoseHPForCardsInHandAction;
 import TheRanger.init.theRanger;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -36,15 +37,7 @@ public class HearthguardPower
     @Override
     public void atStartOfTurnPostDraw()
     {
-        addToBot(new AbstractGameAction()
-        {
-            @Override
-            public void update()
-            {
-                addToTop(new LoseHPAction(owner, owner, (int) (amount * AbstractDungeon.player.hand.group.stream().filter(EmpowerAction::isEmpowerable).count())));
-                isDone = true;
-            }
-        });
+        addToBot(new LoseHPForCardsInHandAction(owner, amount));
         addToBot(new EmpowerAction(AbstractDungeon.player.hand, amount));
     }
 }

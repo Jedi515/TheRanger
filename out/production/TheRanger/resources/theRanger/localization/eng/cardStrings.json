@@ -134,7 +134,10 @@
   "jediranger:FadingMemories": {
     "NAME": "Fading Memories",
     "DESCRIPTION": "Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand."
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Select a card you played this turn to add to your hand"
+    ]
   },
   "jediranger:FlashFreeze": {
     "NAME": "Flash Freeze",

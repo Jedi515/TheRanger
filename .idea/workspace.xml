@@ -7,17 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c29a20-f70d-4eae-b607-9ce05372c1db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/images/panelHeart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/UIStrings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/cardStrings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/characterStrings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/keywordStrings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/powerStrings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/relicStrings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TheRanger/actions/LoseHPForCardsInHandAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheRanger/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/actions/SelectCardsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/RangerCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FadingMemories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/cards/Ranger/skills/FadingMemories.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TheRanger/patches/CrimsonFormPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/patches/CrimsonFormPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/patches/TempCardPatches.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/patches/TempCardPatches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonRealityPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/CrimsonRealityPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TheRanger/powers/HearthguardPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TheRanger/powers/HearthguardPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/powerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/relicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/eng/relicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/cardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/cardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/characterStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/characterStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/keywordStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/keywordStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/powerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/powerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/relicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theRanger/localization/rus/relicStrings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Ranger Card" />
+        <option value="Class" />
       </list>
     </option>
   </component>

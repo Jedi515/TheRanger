@@ -50,7 +50,7 @@ public class SelectCardsAction
         this.anyNumber = anyNumber;
         this.callback = callback;
         this.selectGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        this.selectGroup.group.addAll(group.stream().filter(cardFilter).collect(Collectors.toList()));
+        this.selectGroup.group.addAll(group.stream().distinct().filter(cardFilter).collect(Collectors.toList()));
     }
 
     public SelectCardsAction(ArrayList<AbstractCard> group, String textForSelect, boolean anyNumber, Predicate<AbstractCard> cardFilter, Consumer<List<AbstractCard>> callback)

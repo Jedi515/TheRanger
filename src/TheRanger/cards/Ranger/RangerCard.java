@@ -96,7 +96,13 @@ public abstract class RangerCard
 
     public static AbstractGameAction.AttackEffect getRandomAttackEffect()
     {
-        return AbstractGameAction.AttackEffect.values()[MathUtils.random(0, AbstractGameAction.AttackEffect.values().length-1)];
+        AbstractGameAction.AttackEffect effect;
+        do
+        {
+            effect = AbstractGameAction.AttackEffect.values()[MathUtils.random(0, AbstractGameAction.AttackEffect.values().length-1)];
+        } while (effect == AbstractGameAction.AttackEffect.NONE);
+
+        return effect;
     }
 
     protected static String makeCardID(String ID_in)

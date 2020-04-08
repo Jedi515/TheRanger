@@ -17,25 +17,25 @@
   },
   "jediranger:RegularQuiver":
   {
-    "NAME": "Regular Quiver",
-    "FLAVOR": "It actually tastes a bit salty and metallic. Why did you lick a quiver again?",
+    "NAME": "Обычный колчан",
+    "FLAVOR": "На вкус отдаёт солью и железом... Стоп, зачем ты лизнул колчан?",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a random #ycommon card containing #y\"Arrow\" to your hand.",
+      "Добавляет в руку случ. #yобычную карту, содержащую «Стрела» в названии, в начале каждого боя.",
       "At the start of each combat, choose #b1 of #b3 cards containing #y\"Arrow\" to add to your hand."
     ]
   },
   "jediranger:SharpFang":
   {
-    "NAME": "SharpFang",
-    "FLAVOR": "It's actually just a glorified drinking straw.",
+    "NAME": "Острый клык",
+    "FLAVOR": "Это просто красивая соломинка.",
     "DESCRIPTIONS": [
-      "Whenever you successfully #yjediranger:Drain [REMOVE_SPACE], heal #b1 HP."
+      "Восполняет #b1 ОЗ, когда вы #yjediranger:Вытягиваете ОЗ."
     ]
   },
   "jediranger:GrindingWheel":
   {
-    "NAME": "Grinding Wheel",
-    "FLAVOR": "Too old and used up for your entire weapon, but has just enough power to sharpen the tip.",
+    "NAME": "Точильное колесо",
+    "FLAVOR": "Слишком истёртое для всего оружия, едва хватит на заточку кончика.",
     "DESCRIPTIONS": [
       "Whenever you shuffle your draw pile, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
     ]

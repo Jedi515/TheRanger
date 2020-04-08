@@ -19,6 +19,7 @@ public class FadingMemories
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final int COST = 0;
 
     public FadingMemories()
@@ -29,7 +30,7 @@ public class FadingMemories
     }
     @Override
     public void upgrade() {
-        this.exhaust = false;
+        this.retain = true;
         upgradeName();
         this.rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
@@ -37,8 +38,7 @@ public class FadingMemories
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        addToBot(new FadingMemoriesAction(this.magicNumber));
-        addToBot(new SelectCardsAction(AbstractDungeon.actionManager.cardsPlayedThisTurn, "", c -> !c.cardID.equals(this.cardID) , list ->{
+        addToBot(new SelectCardsAction(AbstractDungeon.actionManager.cardsPlayedThisTurn, EXTENDED_DESCRIPTION[0], c -> !c.cardID.equals(this.cardID) , list ->{
             list.forEach(c ->
                     {
                         AbstractCard crd = c.makeStatEquivalentCopy();

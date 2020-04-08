@@ -24,8 +24,8 @@
       "Shuffle a copy of the first #b%d cards you play each turn into your draw pile and lose HP equal to its cost."
     ]
   },
-  "jediranger:EnchantedQuiverPower": {
-    "NAME": "Enchanted Quiver",
+  "jediranger:EnchantedArrowsPower": {
+    "NAME": "Enchanted Arrows",
     "DESCRIPTIONS": [
       "Cards containing \"Arrow\" deal #b%d additional damage."
     ]
