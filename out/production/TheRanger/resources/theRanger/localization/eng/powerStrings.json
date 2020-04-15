@@ -84,5 +84,11 @@
     "DESCRIPTIONS": [
       "Whenever a card is created during combat, lose HP equal to its cost and #yUpgrade it."
     ]
+  },
+  "jediranger:FocusingShardPower": {
+    "NAME": "Focusing Shard",
+    "DESCRIPTIONS": [
+      "Whenever you #yEmpower a card, #yEmpower it by #b%d more."
+    ]
   }
 }

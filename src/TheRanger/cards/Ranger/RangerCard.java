@@ -25,14 +25,17 @@ public abstract class RangerCard
 
     public RangerCard(String id, String name, String img, int cost, String rawDescription, com.megacrit.cardcrawl.cards.AbstractCard.CardType type, com.megacrit.cardcrawl.cards.AbstractCard.CardColor color, com.megacrit.cardcrawl.cards.AbstractCard.CardRarity rarity, com.megacrit.cardcrawl.cards.AbstractCard.CardTarget target)
     {
-        super(id, name, imgCheck(img, type), cost, rawDescription, type, color, rarity, target);
+        super(id, name, imgCheck(id, img, type), cost, rawDescription, type, color, rarity, target);
         setEMPValue(-1);
         setBrittle(-1);
     }
 
-    private static String imgCheck(String img, CardType type)
+    private static String imgCheck(String id, String img, CardType type)
     {
-        if ((img == null) || (!Gdx.files.internal(img).file().exists()))
+        String imgCheck = "resources/theRanger/images/cards/" + type.toString().toLowerCase() + "/" + id.substring(11) + ".png";
+        if (Gdx.files.internal(imgCheck).exists()) return imgCheck;
+
+        if ((img == null) || (!Gdx.files.internal(img).exists()))
         {
             switch (type)
             {

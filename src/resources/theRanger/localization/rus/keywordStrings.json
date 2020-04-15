@@ -3,6 +3,7 @@
     "PROPER_NAME": "Усиление",
     "NAMES": [
       "усиление",
+      "усилении",
       "усиляет",
       "усиляете",
       "усиляемые",
@@ -31,16 +32,10 @@
   {
     "PROPER_NAME": "Вытягивание",
     "NAMES": [
-      "вытянуть"
+      "вытянуть",
+      "вытягивает",
+      "вытягиваете"
     ],
     "DESCRIPTION": "Наносит врагу указанный урон и исцеляет игрока на незаблокированный урон по ОЗ."
-  },
-  {
-    "PROPER_NAME": "Recall",
-    "NAMES": [
-      "recall",
-      "recalled"
-    ],
-    "DESCRIPTION": "Put a number of cards from your discard pile to your hand."
   }
 ]

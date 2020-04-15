@@ -39,7 +39,9 @@ public class Ranger
         super(name, RANGER, orbTextures, "resources/theRanger/images/orb/vfx.png", null, null, null);
         this.dialogX = this.drawX + 0.0F * Settings.scale;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
-        this.initializeClass("resources/theRanger/images/character/42.png", "resources/theRanger/images/character/shoulder2.png", "resources/theRanger/images/character/shoulder.png", "resources/theRanger/images/character/42.png", this.getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(3));
+        this.initializeClass("resources/theRanger/images/character/42.png", "resources/theRanger/images/character/shoulder2.png", "resources/theRanger/images/character/shoulder.png", "resources/theRanger/images/character/42.png", this.getLoadout(),
+                20.0F, -10.0F, 220.0F, 290.0F,
+                new EnergyManager(3));
     }
 
     @Override

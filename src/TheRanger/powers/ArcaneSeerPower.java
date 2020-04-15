@@ -27,6 +27,7 @@ public class ArcaneSeerPower
         this.amount = amount;
         this.type = PowerType.BUFF;
         loadRegion("nirvana");
+        updateDescription();
     }
 
     public void updateDescription()

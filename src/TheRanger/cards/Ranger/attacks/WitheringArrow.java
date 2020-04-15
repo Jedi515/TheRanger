@@ -31,7 +31,7 @@ public class WitheringArrow
 
     @Override
     public void upgrade() {
-        upgradeDamage(1);
+        upgradeBaseCost(0);
         upgradeName();
     }
 

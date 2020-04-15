@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -36,8 +37,8 @@ public class CrimsonFormPatch
     {
         public static String Postfix(String __result, AbstractCard __instance)
         {
-            if (AbstractDungeon.player == null) return __result;
-            if (AbstractDungeon.player.hasPower(CrimsonFormPower.POWER_ID) && __instance.costForTurn > EnergyPanel.getCurrentEnergy() && !__instance.freeToPlay())
+            if (AbstractDungeon.player == null || AbstractDungeon.getCurrRoom() == null) return __result;
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractDungeon.player.hasPower(CrimsonFormPower.POWER_ID) && __instance.costForTurn > EnergyPanel.getCurrentEnergy() && !__instance.freeToPlay())
             {
                 return Integer.toString((__instance.costForTurn - EnergyPanel.getCurrentEnergy()) * 3);
             }
@@ -71,6 +72,7 @@ public class CrimsonFormPatch
         public static void Insert(AbstractCard __instance, SpriteBatch sb, @ByRef Color[] costColor)
         {
             if (AbstractDungeon.player != null &&
+                    AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT &&
                     __instance.hasEnoughEnergy() &&
                     AbstractDungeon.player.hasPower(CrimsonFormPower.POWER_ID) &&
                     __instance.costForTurn > EnergyPanel.getCurrentEnergy())

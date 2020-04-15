@@ -47,7 +47,7 @@ public class CrimsonPrinterPower
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && this.amount > 0 && AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - this.copiedThisTurn <= this.amount) {
+        if (!card.purgeOnUse && this.amount > 0 && copiedThisTurn < this.amount) {
             ++this.copiedThisTurn;
             int HPLoss = 0;
             if (card.cost == -1) {

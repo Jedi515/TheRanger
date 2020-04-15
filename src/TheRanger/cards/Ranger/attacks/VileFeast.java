@@ -26,7 +26,7 @@ public class VileFeast
     public VileFeast()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(4);
+        setDamage(5);
         tags.add(CardTags.HEALING);
         cardsToPreview = new WitheringStrike();
         exhaust = true;

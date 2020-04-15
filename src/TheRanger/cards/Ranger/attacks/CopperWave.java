@@ -23,8 +23,8 @@ public class CopperWave
     public CopperWave()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
-        setBlock(5);
-        setDamage(5);
+        setBlock(4);
+        setDamage(4);
     }
 
 

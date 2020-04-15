@@ -28,6 +28,11 @@ public class FocusingShardPower
         updateDescription();
     }
 
+    public void updateDescription()
+    {
+        description = String.format(DESCRIPTIONS[0], amount);
+    }
+
     @Override
     public int modifyEmpower(AbstractCard c, int amount) {
         return amount + this.amount;

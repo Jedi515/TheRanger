@@ -78,7 +78,7 @@ public class EmpowerAction
 
         if (card instanceof modifyEmpowerInterface) tmpEmp = ((modifyEmpowerInterface)card).modifyEmpower(card, tmpEmp);
 
-        EmpowerField.EmpowerFieldItself.empowerValue.set(card, EmpowerField.EmpowerFieldItself.empowerValue.get(card) + tmpEmp);
+        if (tmpEmp != 0) EmpowerField.EmpowerFieldItself.empowerValue.set(card, EmpowerField.EmpowerFieldItself.empowerValue.get(card) + tmpEmp);
 
         if (AbstractDungeon.player.hand.group.contains(card))
         {

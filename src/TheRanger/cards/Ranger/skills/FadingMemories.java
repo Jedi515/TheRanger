@@ -30,7 +30,7 @@ public class FadingMemories
     }
     @Override
     public void upgrade() {
-        this.retain = true;
+        this.selfRetain = true;
         upgradeName();
         this.rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

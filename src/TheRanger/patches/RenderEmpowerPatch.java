@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.relics.FrozenEye;
 
 @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
 public class RenderEmpowerPatch
@@ -21,7 +22,7 @@ public class RenderEmpowerPatch
 
     public static void Postfix(AbstractCard __instance, SpriteBatch sb)
     {
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(__instance) && (EmpowerField.EmpowerFieldItself.empowerValue.get(__instance) != 0))
+        if (AbstractDungeon.player != null && (!AbstractDungeon.player.drawPile.contains(__instance) || AbstractDungeon.player.hasRelic(FrozenEye.ID)) && (EmpowerField.EmpowerFieldItself.empowerValue.get(__instance) != 0))
         {
             renderHelper(sb, empRegion, __instance.current_x, __instance.current_y, __instance);
             FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, Integer.toString(EmpowerField.EmpowerFieldItself.empowerValue.get(__instance)), __instance.current_x, __instance.current_y,

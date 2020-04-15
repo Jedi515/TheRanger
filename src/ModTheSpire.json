@@ -4,8 +4,9 @@
   "author_list": ["Jedi#3970"],
   "description": "Tries its best to add a new character.",
   "credits": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "sts_version": "12-20-2018",
   "mts_version": "3.6.1",
-  "dependencies": ["basemod", "stslib"]
+  "dependencies": ["basemod", "stslib"],
+  "update_json": "https://api.github.com/repos/jedi515/theranger/releases/latest"
 }

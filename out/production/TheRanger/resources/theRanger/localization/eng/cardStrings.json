@@ -28,10 +28,10 @@
   },
   "jediranger:CopyCat": {
     "NAME": "CopyCat",
-    "DESCRIPTION": "Draw !M! card. NL If this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1.",
+    "DESCRIPTION": "Draw !M! card. NL When this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1.",
     "EXTENDED_DESCRIPTION": [
       " NL Exhaust.",
-      "Draw !M! cards. NL If this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1."
+      "Draw !M! cards. NL When this card is created during combat, increase the number of cards drawn for ALL *CopyCats by 1."
     ]
   },
   "jediranger:CrimsonApotheosis": {
@@ -157,6 +157,10 @@
     "NAME": "Fresh Offerings",
     "DESCRIPTION": "Can only be played if you Exhausted !M! cards this turn. NL Add a *Crimson *Demon to your hand. NL Exhaust."
   },
+  "jediranger:GashingArrow": {
+    "NAME": "Gashing Arrow",
+    "DESCRIPTION": "Deal !D! damage. NL Increase the damage of ALL *Gashing *Arrows by !M! this combat."
+  },
   "jediranger:GlassArrow": {
     "NAME": "Glass Arrow",
     "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage."
@@ -184,7 +188,7 @@
   },
   "jediranger:Hemophilia": {
     "NAME": "Hemophilia",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, jediranger:Empower -1 the top card of your draw pile."
+    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT!. NL Exhaust."
   },
   "jediranger:Illuminate": {
     "NAME": "Illuminate",
@@ -249,6 +253,10 @@
     "EXTENDED_DESCRIPTION": [
       "Exhaust and apply Vulnerable."
     ]
+  },
+  "jediranger:PaleSlash": {
+    "NAME": "Pale Slash",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Add a *Hemophilia on top of your draw pile."
   },
   "jediranger:PerfectSetup": {
     "NAME": "Perfect Setup",

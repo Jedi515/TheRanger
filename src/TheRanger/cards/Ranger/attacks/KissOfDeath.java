@@ -27,7 +27,7 @@ public class KissOfDeath
     public KissOfDeath()
     {
         super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        setDamage(5);
+        setDamage(6);
         setMN(3);
         tags.add(CardTags.HEALING);
         exhaust = true;

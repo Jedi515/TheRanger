@@ -109,17 +109,12 @@ public class SelectCardsInHandAction
             hand.addAll(AbstractDungeon.handCardSelectScreen.selectedCards.group);
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
-            returnCards();
+            if (tempHand.size() > 0) hand.addAll(tempHand);
+            AbstractDungeon.player.hand.refreshHandLayout();
+            AbstractDungeon.player.hand.applyPowers();
             isDone = true;
             return;
         }
         tickDuration();
-    }
-
-    private void returnCards()
-    {
-        if (tempHand.size() > 0) hand.addAll(tempHand);
-        AbstractDungeon.player.hand.refreshHandLayout();
-        AbstractDungeon.player.hand.applyPowers();
     }
 }

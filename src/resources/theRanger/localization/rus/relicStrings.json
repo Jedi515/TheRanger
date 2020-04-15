@@ -9,10 +9,10 @@
   },
   "jediranger:Amplifier":
   {
-    "NAME": "Amplifier",
-    "FLAVOR": "20% cooler, 80% heater.",
+    "NAME": "Усилитель",
+    "FLAVOR": "20% круче, 80% жарче.",
     "DESCRIPTIONS": [
-      "Whenever you #yjediranger:Empower a card, #yjediranger:Empower it by #b%d more."
+      "При #yjediranger:Усилении карты дополнительно #yУсиляются на #b%d."
     ]
   },
   "jediranger:RegularQuiver":
@@ -37,15 +37,15 @@
     "NAME": "Точильное колесо",
     "FLAVOR": "Слишком истёртое для всего оружия, едва хватит на заточку кончика.",
     "DESCRIPTIONS": [
-      "Whenever you shuffle your draw pile, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
+      "#yjediranger:Усиляет на #b1 верхние #b2 карты стопки добора при перетасовке колоды."
     ]
   },
   "jediranger:CursedBlood":
   {
-    "NAME": "Cursed Blood",
-    "FLAVOR": "You suddenly feel a disturbing lack of crimson liquid in your body.",
+    "NAME": "Проклятая кровь",
+    "FLAVOR": "Вы ощущаете неприятную нехватку алой жидкости в вашем теле.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. At the start of each battle, #yjediranger:Empower #r%d ALL cards."
+      "Даёт [E] в начале вашего года. #yjediranger:Усиляет на #r%d ВСЕ карты в начале боя."
     ]
   }
 }

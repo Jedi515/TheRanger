@@ -31,7 +31,7 @@ public class SelectCardsAction
     * @param cardFilter - Filters the cards in the group.
     * Example: if you want to display only skills, it would be c -> c.type == CardType.SKILL
     * If you don't need the filter, set it as c -> true
-    * @param callback - What to do with cards selected.
+    * @param callback - What to do with cards selected. Accepts a list with cards selected. The list would only contain one element if it's "Select one card"
     * Example: if you want to lose 1 hp and upgrade each card selected, it would look like
     * list -> {
     * addToBot(
@@ -51,6 +51,7 @@ public class SelectCardsAction
         this.callback = callback;
         this.selectGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         this.selectGroup.group.addAll(group.stream().distinct().filter(cardFilter).collect(Collectors.toList()));
+        // It's distinct() because if i don't it may cause the infamous "jiggle" when you see a grid of cards with a same object in different locations.
     }
 
     public SelectCardsAction(ArrayList<AbstractCard> group, String textForSelect, boolean anyNumber, Predicate<AbstractCard> cardFilter, Consumer<List<AbstractCard>> callback)
