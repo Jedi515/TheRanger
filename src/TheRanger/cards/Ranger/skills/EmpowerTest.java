@@ -25,7 +25,7 @@ public class EmpowerTest
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeEmpValue(1);
     }

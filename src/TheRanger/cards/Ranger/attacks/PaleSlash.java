@@ -35,6 +35,7 @@ public class PaleSlash
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeDamage(2);
     }

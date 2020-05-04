@@ -30,7 +30,7 @@ public class WitheringArrow
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeBaseCost(0);
         upgradeName();
     }

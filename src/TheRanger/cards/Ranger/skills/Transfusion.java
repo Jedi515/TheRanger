@@ -25,18 +25,19 @@ public class Transfusion
     public Transfusion()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.NONE);
-        setEMPValue(3);
+        setEMPValue(2);
+        setMN(2);
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeEmpValue(1);
+        upgradeMagicNumber(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelectCardsInHandAction(String.format(TEXT[0], -1), EmpowerAction::isEmpowerable, list -> list.forEach(c -> EmpowerAction.empowerCard(c, -1))));
-        addToBot(new EmpowerTopdeckAction(1, empoweringValue));
+        addToBot(new EmpowerTopdeckAction(magicNumber, empoweringValue));
     }
 }

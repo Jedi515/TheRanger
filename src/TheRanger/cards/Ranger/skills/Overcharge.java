@@ -18,7 +18,7 @@ public class Overcharge
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public static final int COST = 2;
+    public static final int COST = 0;
 
     public Overcharge() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
@@ -27,21 +27,16 @@ public class Overcharge
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeBaseCost(1);
+        upgradeEmpValue(3);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelectCardsInHandAction(EXTENDED_DESCRIPTION[0], EmpowerAction::isEmpowerable, list ->
         {
-            list.forEach(c -> {
-            c.exhaust = true;
-            c.isEthereal = true;
-            EmpowerAction.empowerCard(c, empoweringValue);
-            c.glowColor = Color.RED.cpy();
-            });
+            list.forEach(c -> {makeEphemeral(c); EmpowerAction.empowerCard(c, empoweringValue);});
         }));
     }
 }

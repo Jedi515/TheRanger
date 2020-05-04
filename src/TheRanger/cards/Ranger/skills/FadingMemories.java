@@ -29,7 +29,7 @@ public class FadingMemories
         this.exhaust = true;
     }
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         this.selfRetain = true;
         upgradeName();
         this.rawDescription = UPGRADE_DESCRIPTION;

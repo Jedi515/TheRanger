@@ -28,6 +28,7 @@ public class MakeshiftArmor
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(1);
     }

@@ -37,7 +37,7 @@ public class CrimsonRealityPower
     {
         if (card.canUpgrade())
         {
-            if (card.costForTurn > 0) addToBot(new LoseHPAction(owner, owner, card.costForTurn));
+            if (card.costForTurn > 0) addToTop(new LoseHPAction(owner, owner, card.costForTurn));
             card.upgrade();
         }
     }

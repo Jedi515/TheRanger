@@ -35,7 +35,7 @@ public class Strike
     }
 
 
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(3);

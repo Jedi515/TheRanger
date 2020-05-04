@@ -1,6 +1,7 @@
 package TheRanger.powers;
 
 import TheRanger.init.theRanger;
+import basemod.interfaces.AlternateCardCostModifier;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class CrimsonFormPower
     extends AbstractPower
+    implements AlternateCardCostModifier
 {
     public static final String POWER_ID = theRanger.makeID("CrimsonFormPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -28,16 +30,31 @@ public class CrimsonFormPower
         this.loadRegion("demonForm");
     }
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.costForTurn > EnergyPanel.getCurrentEnergy())
-        {
-            addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, (card.costForTurn - EnergyPanel.getCurrentEnergy()) * 3));
-        }
-    }
-
     public void updateDescription()
     {
         description = DESCRIPTIONS[0];
+    }
+
+    @Override
+    public int getAlternateResource(AbstractCard abstractCard)
+    {
+        return 999;
+    }
+
+    @Override
+    public boolean canSplitCost(AbstractCard card)
+    {
+        return true;
+    }
+
+    @Override
+    public int spendAlternateCost(AbstractCard abstractCard, int i)
+    {
+        addToBot(new LoseHPAction(owner, owner, i * 3));
+        return 0;
+    }
+
+    public boolean costEffectActive(AbstractCard card) {
+        return card.cost > 0;
     }
 }

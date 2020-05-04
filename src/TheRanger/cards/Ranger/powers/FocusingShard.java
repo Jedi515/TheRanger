@@ -25,7 +25,7 @@ public class FocusingShard
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         isInnate = true;
         rawDescription = UPGRADE_DESCRIPTION;

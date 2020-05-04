@@ -29,6 +29,7 @@ public class Hearthguard
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         isInnate = true;
         rawDescription = UPGRADE_DESCRIPTION;

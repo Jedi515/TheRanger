@@ -24,15 +24,15 @@ public class ChillingGrasp
 
     public ChillingGrasp() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        setDamage(6);
+        setDamage(7);
         exhaust = true;
         tags.add(CardTags.HEALING);
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 
     @Override

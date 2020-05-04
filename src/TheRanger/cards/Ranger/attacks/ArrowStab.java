@@ -1,11 +1,13 @@
 package TheRanger.cards.Ranger.attacks;
 
+import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.patches.RangerCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,27 +32,17 @@ public class ArrowStab
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean retVal = super.canUse(p, m);
-        if (!retVal) return false;
-
-        if (p.hand.contains(this))
-        retVal = p.hand.size() > 1;
-
-        if (!retVal)
-            cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return retVal;
-    }
-
-    @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeDamage(3);
         upgradeName();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        addToBot(new ExhaustAction(1, false));
+        addToBot(new SelectCardsInHandAction(EXTENDED_DESCRIPTION[0], list -> list.forEach(c ->
+        {
+            addToTop(new ExhaustSpecificCardAction(c, p.hand));
+            addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        })));
     }
 }

@@ -28,7 +28,7 @@ public class RivershaperStrike
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeDamage(2);
         upgradeName();
     }

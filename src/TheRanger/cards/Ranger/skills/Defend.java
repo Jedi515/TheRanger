@@ -33,7 +33,7 @@ public class Defend
         addToBot(new GainBlockAction(p, p, this.block));
     }
 
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeBlock(3);

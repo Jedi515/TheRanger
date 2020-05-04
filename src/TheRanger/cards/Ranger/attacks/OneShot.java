@@ -4,6 +4,7 @@ import TheRanger.actions.AbsorbEmpowerAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.patches.EmpowerField;
+import TheRanger.patches.RangerCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -26,13 +27,14 @@ public class OneShot
 
     public OneShot() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ENEMY);
-        setDamage(0);
+        setDamage(2);
+        setMN(3);
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeBaseCost(2);
+        upgradeMagicNumber(1);
     }
 
     @Override
@@ -42,30 +44,23 @@ public class OneShot
             this.addToBot(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
         }
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        addToBot(new AbsorbEmpowerAction(p.hand, this));
     }
 
     public void applyPowers()
     {
         int tmpBase = baseDamage;
-
-        AbstractDungeon.player.hand.group.forEach(c -> {
-            if (!(c == this)) baseDamage += EmpowerField.EmpowerFieldItself.empowerValue.get(c);
-        }
-        );
+        baseDamage += AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(c -> c.hasTag(RangerCardTags.JEDIRANGER_ARROW)).count() * magicNumber;
         super.applyPowers();
         baseDamage = tmpBase;
+        isDamageModified = baseDamage != damage;
     }
 
     public void calculateCardDamage(AbstractMonster m)
     {
         int tmpBase = baseDamage;
-
-        AbstractDungeon.player.hand.group.forEach(c -> {
-                    if (!(c == this)) baseDamage += EmpowerField.EmpowerFieldItself.empowerValue.get(c);
-                }
-        );
+        baseDamage += AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(c -> c.hasTag(RangerCardTags.JEDIRANGER_ARROW)).count() * magicNumber;
         super.calculateCardDamage(m);
         baseDamage = tmpBase;
+        isDamageModified = baseDamage != damage;
     }
 }

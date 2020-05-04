@@ -33,6 +33,7 @@ public class BalancedArrow
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(2);
     }

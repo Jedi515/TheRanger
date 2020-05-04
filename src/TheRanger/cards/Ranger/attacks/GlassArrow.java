@@ -28,7 +28,7 @@ public class GlassArrow
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeDamage(5);
         upgradeBrittle(1);

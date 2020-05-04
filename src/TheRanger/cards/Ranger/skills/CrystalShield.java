@@ -25,7 +25,7 @@ public class CrystalShield
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeBlock(3);
         upgradeName();
     }

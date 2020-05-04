@@ -3,6 +3,9 @@
 # IntelliJ
 .idea/*
 out/*
+.idea\*
+out\*
+
 *.iml
 
 # Eclipse
@@ -80,3 +83,4 @@ $RECYCLE.BIN/
 
 # Meta manifest because why?
 META-INF/*
+*.class

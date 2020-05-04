@@ -39,7 +39,7 @@ public class SignalArrow
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeDamage(1);
         upgradeMagicNumber(1);
         this.rawDescription = UPGRADE_DESCRIPTION;

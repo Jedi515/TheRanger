@@ -11,5 +11,6 @@
     <orderEntry type="library" name="ModTheSpire" level="project" />
     <orderEntry type="library" name="BaseMod" level="project" />
     <orderEntry type="library" name="StSLib" level="project" />
+    <orderEntry type="library" name="desktop-1.0-patched" level="project" />
   </component>
 </module>

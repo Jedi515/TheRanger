@@ -28,7 +28,7 @@ public class GlassDagger
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeDamage(1);
         upgradeBrittle(2);
         upgradeName();

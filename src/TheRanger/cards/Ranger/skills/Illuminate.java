@@ -20,7 +20,7 @@ public class Illuminate
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 2;
+    public static final int COST = 1;
 
     public Illuminate()
     {
@@ -30,7 +30,7 @@ public class Illuminate
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeEmpValue(1);
         upgradeBlock(1);

@@ -25,7 +25,7 @@ public class ObliviousCloak
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeBlock(2);
     }
@@ -37,7 +37,8 @@ public class ObliviousCloak
             list.forEach(c -> {
             makeEphemeral(c);
             if (c.costForTurn > 0) {
-                c.cost = c.costForTurn = c.costForTurn - 1;
+                c.setCostForTurn(c.costForTurn - 1);
+                c.cost = c.costForTurn;
                 c.upgradedCost = true;
             }}
             );

@@ -45,8 +45,8 @@ public class MakeshiftSwordPower
     @Override
     public void onCreateCard(AbstractCard card)
     {
-        this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(new CleaveEffect()));
-        this.addToBot(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
+        this.addToTop(new DamageAllEnemiesAction(owner, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.NONE, true));
+        this.addToTop(new SFXAction("ATTACK_HEAVY"));
+        this.addToTop(new VFXAction(new CleaveEffect()));
     }
 }

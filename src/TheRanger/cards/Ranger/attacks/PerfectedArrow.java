@@ -32,7 +32,7 @@ public class PerfectedArrow
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         this.upgradeName();
         this.upgradeMagicNumber(1);
     }

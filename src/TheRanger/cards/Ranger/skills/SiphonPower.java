@@ -30,6 +30,7 @@ public class SiphonPower
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeBaseCost(0);
     }
@@ -39,7 +40,8 @@ public class SiphonPower
     {
         addToBot(new SelectCardsInHandAction(EXTENDED_DESCRIPTION[0], list -> list.forEach(c ->
         {
-            addToBot(new GainEnergyAction(EmpowerField.EmpowerFieldItself.empowerValue.get(c)));
+            int emp = EmpowerField.EmpowerFieldItself.empowerValue.get(c);
+            if (emp > 0) addToBot(new GainEnergyAction(emp));
             addToBot(new ExhaustSpecificCardAction(c, p.hand));
             EmpowerField.EmpowerFieldItself.empowerValue.set(c, 0);
         })));

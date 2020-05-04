@@ -31,6 +31,7 @@ public class SpinningAxe
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeDamage(2);
 

@@ -2,9 +2,11 @@ package TheRanger.cards.Ranger.skills;
 
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.cards.Ranger.attacks.CrimsonDemon;
+import TheRanger.interfaces.cardOnExhaustOther;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.patches.ExhaustedPerTurnPatch;
 import TheRanger.patches.RangerCardTags;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,24 +15,25 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class FreshOfferings
-        extends RangerCard {
+        extends RangerCard
+    implements cardOnExhaustOther
+{
     public static final String ID = makeCardID("FreshOfferings");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 1;
+    public static final int COST = 5;
 
     public FreshOfferings() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
         exhaust = true;
         cardsToPreview = new CrimsonDemon();
-        setMN(4);
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeMagicNumber(-1);
+        upgradeBaseCost(cost - 1);
     }
 
     @Override
@@ -38,17 +41,14 @@ public class FreshOfferings
         addToBot(new MakeTempCardInHandAction(new CrimsonDemon()));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean retVal = super.canUse(p, m);
-        if (!retVal) return false;
-
-        return ExhaustedPerTurnPatch.exhaustCounter > magicNumber-1;
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
+        this.setCostForTurn(this.cost - ExhaustedPerTurnPatch.exhaustCounter);
     }
 
-    public void triggerOnGlowCheck()
+    @Override
+    public void onExhaustOther(AbstractCard c)
     {
-        if (ExhaustedPerTurnPatch.exhaustCounter > magicNumber-1) glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        else glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        setCostForTurn(this.costForTurn - 1);
     }
 }

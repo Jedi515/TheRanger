@@ -38,6 +38,6 @@ public class MakeshiftArmorPower
     @Override
     public void onCreateCard(AbstractCard card)
     {
-        addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
+        addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, amount));
     }
 }

@@ -25,7 +25,7 @@ public class PerfectSetup
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeMagicNumber(2);
         upgradeName();
     }

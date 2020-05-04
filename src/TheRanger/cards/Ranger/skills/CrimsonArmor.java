@@ -46,19 +46,19 @@ public class CrimsonArmor
             @Override
             public void update()
             {
-                int energyInUse = EnergyPanel.getCurrentEnergy();
+                int usedEnergy = energyOnUse;
                 if (p.hasRelic(ChemicalX.ID))
                 {
                     p.getRelic(ChemicalX.ID).flash();
-                    energyInUse += 2;
+                    usedEnergy += 2;
                 }
 
-                for (int i = 0; i < energyInUse; i++)
+                for (int i = 0; i < usedEnergy; i++)
                 {
                     addToBot(new AddTemporaryHPAction(p, p, upgraded ? block : magicNumber));
                 }
 
-                if (!freeToPlay()) p.energy.use(EnergyPanel.getCurrentEnergy());
+                if (!freeToPlay()) p.energy.use(energyOnUse);
                 isDone = true;
             }
         });

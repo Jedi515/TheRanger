@@ -111,8 +111,6 @@ public class EmpowerField
                 __instance.group.stream().filter(c -> EmpowerFieldItself.rangerEphemeral.get(c)).forEach(c ->
                 {
                     c.glowColor = Color.RED.cpy();
-                    if (!c.exhaust) c.exhaust = true;
-                    if (!c.isEthereal) c.isEthereal = true;
                 });
             }
         }

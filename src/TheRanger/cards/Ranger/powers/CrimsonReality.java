@@ -29,6 +29,7 @@ public class CrimsonReality
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeBaseCost(0);
     }

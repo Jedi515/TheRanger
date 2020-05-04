@@ -40,7 +40,7 @@ public class Ranger
         this.dialogX = this.drawX + 0.0F * Settings.scale;
         this.dialogY = this.drawY + 220.0F * Settings.scale;
         this.initializeClass("resources/theRanger/images/character/42.png", "resources/theRanger/images/character/shoulder2.png", "resources/theRanger/images/character/shoulder.png", "resources/theRanger/images/character/42.png", this.getLoadout(),
-                20.0F, -10.0F, 220.0F, 290.0F,
+                -35.0F, -10.0F, 200.0F, 320.0F,
                 new EnergyManager(3));
     }
 
@@ -90,7 +90,7 @@ public class Ranger
 
     @Override
     public Color getCardRenderColor() {
-        return TEAL;
+        return TEAL.cpy();
     }
 
     @Override
@@ -100,7 +100,7 @@ public class Ranger
 
     @Override
     public Color getCardTrailColor() {
-        return TEAL;
+        return TEAL.cpy();
     }
 
     @Override

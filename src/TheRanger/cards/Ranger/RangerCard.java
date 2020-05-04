@@ -93,8 +93,6 @@ public abstract class RangerCard
     {
         EmpowerField.EmpowerFieldItself.rangerEphemeral.set(c, true);
         c.glowColor = Color.RED.cpy();
-        c.exhaust = true;
-        c.isEthereal = true;
     }
 
     public static AbstractGameAction.AttackEffect getRandomAttackEffect()

@@ -40,7 +40,7 @@ public class Vengeance
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeBaseCost(2);
     }

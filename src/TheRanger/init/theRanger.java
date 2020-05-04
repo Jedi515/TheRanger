@@ -12,10 +12,8 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,10 +25,10 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
 import static TheRanger.patches.RangerClassEnum.RANGER;
-import static basemod.BaseMod.*;
+import static basemod.BaseMod.gson;
+import static basemod.BaseMod.loadCustomStrings;
 
 @SpireInitializer
 public class theRanger
@@ -68,8 +66,8 @@ public class theRanger
     }
 
     @Override
-    public void receiveEditCharacters() {
-
+    public void receiveEditCharacters()
+    {
         BaseMod.addCharacter(new Ranger(CardCrawlGame.playerName), "resources/theRanger/images/character/button.png", null, RANGER);
     }
 
@@ -84,7 +82,6 @@ public class theRanger
     @Override
     public void receiveEditRelics()
     {
-//        BaseMod.addRelicToCustomPool(new RegularQuiver(), RANGER_COLOR);
         new AutoAdd(modID).packageFilter(RangerRelic.class).any(RangerRelic.class, (info, relic) -> {
         BaseMod.addRelicToCustomPool(relic, AbstractCardEnum.RANGER_COLOR);
         if (info.seen) {
@@ -149,22 +146,21 @@ public class theRanger
     }
 
     @Override
-    public void receivePostInitialize() {
+    public void receivePostInitialize()
+    {
         chaosCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         remembranceCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         CardLibrary.getAllCards().stream().filter(c ->
-                                (c.rarity != AbstractCard.CardRarity.SPECIAL) &&
-                                (c.rarity != AbstractCard.CardRarity.BASIC) &&
-                                (c.type != AbstractCard.CardType.CURSE) &&
-                                (c.type != AbstractCard.CardType.STATUS)
-                ).forEach(c -> chaosCards.group.add(c.makeCopy()));
+                (c.rarity != AbstractCard.CardRarity.SPECIAL) &&
+                        (c.rarity != AbstractCard.CardRarity.BASIC) &&
+                        (c.type != AbstractCard.CardType.CURSE) &&
+                        (c.type != AbstractCard.CardType.STATUS)
+        ).forEach(c -> chaosCards.group.add(c.makeCopy()));
         CardLibrary.getAllCards().stream().filter(c ->
-                        (c.color == AbstractCardEnum.RANGER_COLOR) &&
                         (c.rarity == AbstractCard.CardRarity.RARE) &&
                         (!c.hasTag(AbstractCard.CardTags.HEALING))
-                ).forEach(c -> remembranceCards.addToTop(c.makeCopy()));
+        ).forEach(c -> remembranceCards.addToTop(c.makeCopy()));
     }
-
     public static void onGenerateCardMidcombat(AbstractCard c)
     {
         AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));

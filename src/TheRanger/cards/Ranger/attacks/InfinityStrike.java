@@ -40,6 +40,7 @@ public class InfinityStrike
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeBaseCost(1);
     }

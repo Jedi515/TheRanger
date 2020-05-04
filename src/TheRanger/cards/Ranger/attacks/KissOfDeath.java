@@ -27,7 +27,7 @@ public class KissOfDeath
     public KissOfDeath()
     {
         super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        setDamage(6);
+        setDamage(8);
         setMN(3);
         tags.add(CardTags.HEALING);
         exhaust = true;
@@ -41,10 +41,10 @@ public class KissOfDeath
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(1);
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 
     @Override

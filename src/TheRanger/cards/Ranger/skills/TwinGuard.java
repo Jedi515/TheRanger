@@ -25,7 +25,7 @@ public class TwinGuard
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeMagicNumber(1);
         upgradeName();
     }

@@ -49,15 +49,6 @@ public class CrimsonPrinterPower
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!card.purgeOnUse && this.amount > 0 && copiedThisTurn < this.amount) {
             ++this.copiedThisTurn;
-            int HPLoss = 0;
-            if (card.cost == -1) {
-                HPLoss = card.energyOnUse;
-            }
-            if (card.cost > 0) {
-                HPLoss = card.cost;
-            }
-
-            if (HPLoss > 0) addToBot(new LoseHPAction(owner, owner, HPLoss));
             addToBot(new MakeTempCardInDrawPileAction(card.makeStatEquivalentCopy(), 1, true, true));
         }
     }

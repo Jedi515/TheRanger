@@ -3,6 +3,7 @@ package TheRanger.cards.Ranger.skills;
 import TheRanger.actions.EmpowerAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,7 +27,7 @@ public class Rally
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeBlock(2);
         upgradeName();
     }
@@ -34,12 +35,20 @@ public class Rally
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        if (!p.drawPile.isEmpty())
+        addToBot(new AbstractGameAction()
         {
-            if (p.drawPile.getTopCard().type == CardType.SKILL)
+            @Override
+            public void update()
             {
-                addToBot(new EmpowerAction(p.hand, empoweringValue));
+                if (!p.drawPile.isEmpty())
+                {
+                    if (p.drawPile.getTopCard().type == CardType.SKILL)
+                    {
+                        addToBot(new EmpowerAction(p.hand, empoweringValue));
+                    }
+                }
+                isDone = true;
             }
-        }
+        });
     }
 }

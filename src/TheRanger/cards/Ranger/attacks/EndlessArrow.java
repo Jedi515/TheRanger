@@ -27,7 +27,7 @@ public class EndlessArrow
     public EndlessArrow()
     {
         super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
-        setDamage(3);
+        setDamage(4);
         exhaust = true;
         tags.add(RangerCardTags.JEDIRANGER_ARROW);
     }
@@ -37,7 +37,7 @@ public class EndlessArrow
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeDamage(2);
     }

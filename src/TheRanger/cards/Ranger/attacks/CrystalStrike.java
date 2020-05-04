@@ -29,7 +29,7 @@ public class CrystalStrike
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeDamage(4);
         upgradeName();
     }

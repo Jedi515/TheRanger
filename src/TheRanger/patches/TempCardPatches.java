@@ -1,6 +1,7 @@
 package TheRanger.patches;
 
 import TheRanger.init.theRanger;
+import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -41,33 +42,39 @@ public class TempCardPatches
 //    @SpirePatch(clz = MakeTempCardAtBottomOfDeckAction.class, method = "update")
 //    @SpirePatch(clz = MakeTempCardInDrawPileAction.class, method = "update") localvars = {"c"}
 
+
+//    @SpirePatch(clz = ShowCardAndAddToDiscardEffect.class, method = "update")
+//    public static class InDiscard
+//    {
+//        @SpireInsertPatch(locator =  LocatorDiscard.class, localvars = {"card"})
+//        public static void Insert(AbstractGameEffect __instance, AbstractCard c)
+//        {
+//            theRanger.onGenerateCardMidcombat(c);
+//        }
+//    }
+//
+//    @SpirePatch(clz = ShowCardAndAddToHandEffect.class, method = "update")
+//    public static class InHand
+//    {
+//        @SpireInsertPatch(locator =  LocatorHand.class, localvars = {"card"})
+//        public static void Insert(AbstractGameEffect __instance, AbstractCard c)
+//        {
+//            theRanger.onGenerateCardMidcombat(c);
+//        }
+//    }
+
     @SpirePatch(clz = ShowCardAndAddToDiscardEffect.class, method = "update")
-    public static class InDiscard
-    {
-        @SpireInsertPatch(locator =  LocatorDiscard.class, localvars = {"card"})
-        public static void Insert(AbstractGameEffect __instance, AbstractCard c)
-        {
-            theRanger.onGenerateCardMidcombat(c);
-        }
-    }
-
     @SpirePatch(clz = ShowCardAndAddToHandEffect.class, method = "update")
-    public static class InHand
-    {
-        @SpireInsertPatch(locator =  LocatorHand.class, localvars = {"card"})
-        public static void Insert(AbstractGameEffect __instance, AbstractCard c)
-        {
-            theRanger.onGenerateCardMidcombat(c);
-        }
-    }
-
     @SpirePatch(clz = ShowCardAndAddToDrawPileEffect.class, method = "update")
     public static class InDraw
     {
-        @SpireInsertPatch(locator =  LocatorDraw.class, localvars = {"card"})
-        public static void Insert(AbstractGameEffect __instance, AbstractCard c)
+//        @SpireInsertPatch(locator =  LocatorDraw.class, localvars = {"card"})
+        public static void Prefix(AbstractGameEffect __instance)
         {
-            theRanger.onGenerateCardMidcombat(c);
+            if (__instance.duration == (float)ReflectionHacks.getPrivateStatic(__instance.getClass(), "EFFECT_DUR"))
+            {
+                theRanger.onGenerateCardMidcombat((AbstractCard) ReflectionHacks.getPrivate(__instance, __instance.getClass(), "card"));
+            }
         }
     }
 

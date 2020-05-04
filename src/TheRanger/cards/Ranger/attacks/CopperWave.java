@@ -29,7 +29,7 @@ public class CopperWave
 
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeBlock(2);
         upgradeDamage(2);
         upgradeName();

@@ -27,7 +27,7 @@ public class CrimsonApotheosis
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(4);
         setEMPValue(magicNumber / 2);

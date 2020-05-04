@@ -50,7 +50,7 @@ public class ExtraCopyPower
     {
         if (canTrigger)
         {
-            addToBot(new MakeTempCardInDrawPileAction(card.makeSameInstanceOf(), amount, true, true));
+            addToTop(new MakeTempCardInDrawPileAction(card.makeSameInstanceOf(), amount, true, true));
             canTrigger = false;
         }
     }

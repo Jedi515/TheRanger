@@ -33,6 +33,7 @@ public class GashingArrow
     public void upgrade()
     {
         upgradeName();
+        upgradeMagicNumber(1);
     }
 
     @Override

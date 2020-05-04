@@ -4,5 +4,47 @@
     "TEXT": [
       "Empower by %d."
     ]
+  },
+  "jediranger:D":
+  {
+    "TEXT": [
+      "%s NL Double play."
+    ]
+  },
+  "jediranger:L":
+  {
+    "TEXT": [
+      "%s NL Increase Max HP by 1 and Purge."
+    ]
+  },
+  "jediranger:O":
+  {
+    "TEXT": [
+      "%s NL Double the damage dealt and Exhaust."
+    ]
+  },
+  "jediranger:W":
+  {
+    "TEXT": [
+      "%s NL Weak +1."
+    ]
+  },
+  "jediranger:V":
+  {
+    "TEXT": [
+      "%s NL Vulnerable +1."
+    ]
+  },
+  "jediranger:I":
+  {
+    "TEXT": [
+      "Innate. NL %s"
+    ]
+  },
+  "jediranger:P":
+  {
+    "TEXT": [
+      "%s NL Poison +%d"
+    ]
   }
 }

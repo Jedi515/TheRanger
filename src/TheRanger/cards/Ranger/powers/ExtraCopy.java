@@ -18,7 +18,7 @@ public class ExtraCopy
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public static final int COST = 3;
+    public static final int COST = 2;
 
     public ExtraCopy()
     {
@@ -30,7 +30,7 @@ public class ExtraCopy
     public void upgrade()
     {
         upgradeName();
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
     }
 
     @Override

@@ -43,7 +43,7 @@ public class CrimsonDiscovery
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

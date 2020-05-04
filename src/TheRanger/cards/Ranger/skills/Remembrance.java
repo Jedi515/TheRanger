@@ -20,23 +20,29 @@ public class Remembrance
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 5;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final int COST = 4;
 
     public Remembrance() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
-        setMN(3);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.NONE);
+        setMN(4);
         exhaust = true;
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeBaseCost(cost - 1);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new CustomDiscoveryAction(theRanger.remembranceCards, magicNumber));
+        addToBot(new CustomDiscoveryAction(theRanger.remembranceCards, magicNumber, false, c ->
+        {
+            if (this.upgraded) c.setCostForTurn(0);
+        }
+            ));
     }
 
     @Override

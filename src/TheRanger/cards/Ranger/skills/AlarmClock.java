@@ -28,7 +28,7 @@ public class AlarmClock
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeBlock(2);
         upgradeName();
     }

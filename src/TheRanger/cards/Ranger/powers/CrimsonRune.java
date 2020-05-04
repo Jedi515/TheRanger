@@ -23,7 +23,7 @@ public class CrimsonRune
     public CrimsonRune()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        setMN(1);
+        setMN(2);
     }
 
     @Override

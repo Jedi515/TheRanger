@@ -23,14 +23,14 @@ public class HailOfArrows
 
     public HailOfArrows() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        setMN(2);
-        setDamage(5);
+        setMN(3);
+        setDamage(4);
         isMultiDamage = true;
         isEthereal = true;
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(1);
     }

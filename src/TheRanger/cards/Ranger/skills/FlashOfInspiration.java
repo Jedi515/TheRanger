@@ -27,7 +27,7 @@ public class FlashOfInspiration
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;

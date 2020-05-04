@@ -32,6 +32,7 @@ public class CrimsonBreath
     @Override
     public void upgrade()
     {
+        if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(3);
     }

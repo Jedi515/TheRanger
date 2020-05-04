@@ -21,16 +21,16 @@ public class CrimsonDemon
 
     public CrimsonDemon() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.SPECIAL, CardTarget.ALL);
-        setDamage(16);
+        setDamage(13);
         isMultiDamage = true;
-        setBlock(16);
+        setBlock(13);
     }
 
     @Override
-    public void upgrade() {
+    public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeDamage(6);
-        upgradeBlock(6);
+        upgradeDamage(5);
+        upgradeBlock(5);
     }
 
     @Override
