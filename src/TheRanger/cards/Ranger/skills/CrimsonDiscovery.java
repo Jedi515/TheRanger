@@ -29,8 +29,8 @@ public class CrimsonDiscovery
     public CrimsonDiscovery() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
         exhaust = true;
-        setMN(6);
-        setEMPValue(magicNumber / 3);
+        setMN(4);
+        setEMPValue(magicNumber / 2);
         group.clear();
         if (CardCrawlGame.isInARun())
         CardLibrary.getAllCards().stream().filter(c -> (

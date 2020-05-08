@@ -49,7 +49,7 @@
   },
   "jediranger:CrimsonChaos": {
     "NAME": "Crimson Chaos",
-    "DESCRIPTION": "Lose 4 HP. NL For each *Crimson *Chaos played this combat, shuffle a random card of any color into your draw pile. ( !M! ) NL Exhaust"
+    "DESCRIPTION": "Lose 3 HP. NL For each *Crimson *Chaos played this combat, shuffle a random card of any color into your draw pile. ( !M! ) NL Exhaust"
   },
   "jediranger:CrimsonDemon": {
     "NAME": "Crimson Demon",
@@ -239,7 +239,7 @@
   },
   "jediranger:OneShot": {
     "NAME": "One Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Arrow played this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Arrow played this combat. NL Exhaust."
   },
   "jediranger:Overcharge": {
     "NAME": "Overcharge",
@@ -349,7 +349,7 @@
   },
   "jediranger:Undying": {
     "NAME": "Undying",
-    "DESCRIPTION": "Deal !D! damage. NL When Exhausted, increase its damage by !M! and Fetch it back to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL At the start of your turn, Fetch this card from exhaust pile to your hand and increase its damage by !M!."
   },
   "jediranger:Vengeance": {
     "NAME": "Vengeance",

@@ -1,6 +1,8 @@
 package TheRanger.init;
 
+import TheRanger.cardMods.UndyingDamageUp;
 import TheRanger.cards.Ranger.RangerCard;
+import TheRanger.cards.Ranger.attacks.Undying;
 import TheRanger.characters.Ranger;
 import TheRanger.interfaces.onGenerateCardMidcombatInterface;
 import TheRanger.patches.AbstractCardEnum;
@@ -9,10 +11,12 @@ import TheRanger.variables.BrittleVariable;
 import TheRanger.variables.EmpowerVariable;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -22,6 +26,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.nio.charset.StandardCharsets;
@@ -39,12 +44,17 @@ public class theRanger
             EditCardsSubscriber,
             EditRelicsSubscriber,
             EditKeywordsSubscriber,
-            PostInitializeSubscriber
+            PostInitializeSubscriber,
+            OnStartBattleSubscriber,
+            PostEnergyRechargeSubscriber
+
 {
     public static final String modID = "jediranger";
     public static Color rangerTeal = CardHelper.getColor(43.0F, 207.0F, 213.0F);
     public static CardGroup chaosCards;
     public static CardGroup remembranceCards;
+    public static int cardsCreatedThisTurn = 0;
+    public static int cardsCreatedThisCombat = 0;
 
     public static String makeID(String ID_in)
     {
@@ -165,9 +175,30 @@ public class theRanger
     {
         AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
         AbstractDungeon.player.powers.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
+        AbstractDungeon.player.hand.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).onCreateCardCard(c));
+        AbstractDungeon.player.discardPile.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).onCreateCardCard(c));
+        AbstractDungeon.player.drawPile.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).onCreateCardCard(c));
+        AbstractDungeon.getMonsters().monsters.stream().filter(mon -> !mon.isDeadOrEscaped()).forEach(m -> m.powers.stream().filter(pow -> pow instanceof onGenerateCardMidcombatInterface).forEach(pow -> ((onGenerateCardMidcombatInterface)pow).onCreateCard(c)));
         if (c instanceof onGenerateCardMidcombatInterface)
         {
             ((onGenerateCardMidcombatInterface)c).onCreateCard(c);
         }
+        cardsCreatedThisCombat++;
+        cardsCreatedThisTurn++;
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom)
+    {
+        cardsCreatedThisCombat = 0;
+        cardsCreatedThisTurn = 0;
+    }
+
+    @Override
+    public void receivePostEnergyRecharge()
+    {
+        AbstractDungeon.player.exhaustPile.group.stream().filter(c -> c.cardID.equals(Undying.ID)).forEach(c -> AbstractDungeon.actionManager.addToBottom(new FetchAction(AbstractDungeon.player.exhaustPile, crd -> crd == c,
+                list -> list.forEach(card -> CardModifierManager.addModifier(card, new UndyingDamageUp(card.magicNumber)))
+        )));
     }
 }

@@ -7,6 +7,7 @@ import TheRanger.cards.Ranger.skills.AlarmClock;
 import TheRanger.cards.Ranger.skills.Defend;
 import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
+import TheRanger.relics.GrindingWheel;
 import TheRanger.relics.RegularQuiver;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -69,7 +70,7 @@ public class Ranger
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(RegularQuiver.ID);
+        retVal.add(GrindingWheel.ID);
         return retVal;
     }
 

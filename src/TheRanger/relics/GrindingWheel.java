@@ -13,7 +13,8 @@ public class GrindingWheel
         super(ID, RelicTier.COMMON, LandingSound.FLAT);
     }
 
-    public void onShuffle()
+    @Override
+    public void atTurnStart()
     {
         flash();
         addToBot(new EmpowerTopdeckAction(2, 1));

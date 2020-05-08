@@ -20,7 +20,7 @@ public class ObliviousCloak
     public static final int COST = 1;
 
     public ObliviousCloak() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         setBlock(6);
     }
 

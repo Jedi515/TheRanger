@@ -29,6 +29,7 @@ public class OneShot
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         setDamage(2);
         setMN(3);
+        exhaust = true;
     }
 
     @Override

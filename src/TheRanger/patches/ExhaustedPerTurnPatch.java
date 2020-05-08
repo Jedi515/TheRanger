@@ -1,5 +1,6 @@
 package TheRanger.patches;
 
+import TheRanger.init.theRanger;
 import TheRanger.interfaces.cardOnExhaustOther;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
@@ -38,6 +39,7 @@ public class ExhaustedPerTurnPatch
         public static void Postfix(GameActionManager __instance)
         {
             exhaustCounter = 0;
+            theRanger.cardsCreatedThisTurn = 0;
         }
     }
     @SpirePatch(clz = GameActionManager.class, method = "getNextAction")
@@ -47,6 +49,7 @@ public class ExhaustedPerTurnPatch
         public static void Insert(GameActionManager __instance)
         {
             exhaustCounter = 0;
+            theRanger.cardsCreatedThisTurn = 0;
         }
     }
 

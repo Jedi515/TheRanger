@@ -55,10 +55,10 @@ public class Undying
         super.resetAttributes();
         if (AbstractDungeon.player != null && AbstractDungeon.player.hand.contains(this)) applyPowers();
     }
-
-    @Override
-    public void triggerOnExhaust()
-    {
-        addToTop(new FetchAction(AbstractDungeon.player.exhaustPile, c -> c == this, list -> list.forEach(c -> {CardModifierManager.addModifier(c, new UndyingDamageUp(magicNumber)); c.applyPowers();})));
-    }
+//
+//    @Override
+//    public void triggerOnExhaust()
+//    {
+//        addToTop(new FetchAction(AbstractDungeon.player.exhaustPile, c -> c == this, list -> list.forEach(c -> {CardModifierManager.addModifier(c, new UndyingDamageUp(magicNumber)); c.applyPowers();})));
+//    }
 }

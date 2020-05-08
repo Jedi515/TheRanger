@@ -21,7 +21,7 @@ public class Overcharge
     public static final int COST = 0;
 
     public Overcharge() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.NONE);
         setEMPValue(5);
         exhaust = true;
     }

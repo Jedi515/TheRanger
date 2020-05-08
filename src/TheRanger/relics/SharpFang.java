@@ -14,7 +14,7 @@ public class SharpFang
 
     public SharpFang()
     {
-        super(ID, RelicTier.UNCOMMON, LandingSound.CLINK);
+        super(ID, RelicTier.DEPRECATED, LandingSound.CLINK);
     }
 
 

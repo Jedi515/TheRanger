@@ -6,6 +6,7 @@ import TheRanger.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -21,17 +22,27 @@ public class FlashOfInspiration
 
     public FlashOfInspiration()
     {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.NONE);
-        setMN(1);
+        super(ID, NAME, null, COST, UPGRADE_DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.NONE);
+        setMN(2);
         exhaust = true;
+    }
+
+    @Override
+    public float getTitleFontSize()
+    {
+        switch (Settings.language)
+        {
+            case RUS:
+            case ENG:
+                return 20F;
+            default: return super.getTitleFontSize();
+        }
     }
 
     @Override
     public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeMagicNumber(1);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 
     @Override

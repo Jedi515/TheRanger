@@ -20,7 +20,6 @@
     "NAME": "Regular Quiver",
     "FLAVOR": "It actually tastes a bit salty and metallic. Why did you lick a quiver again?",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a random #ycommon card containing #y\"Arrow\" to your hand.",
       "At the start of each combat, choose #b1 of #b3 cards containing #y\"Arrow\" to add to your hand."
     ]
   },
@@ -37,7 +36,7 @@
     "NAME": "Grinding Wheel",
     "FLAVOR": "Too old and used up for your entire weapon, but has just enough power to sharpen the tip.",
     "DESCRIPTIONS": [
-      "Whenever you shuffle your draw pile, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
+      "At the start of your turn, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
     ]
   },
   "jediranger:CursedBlood":

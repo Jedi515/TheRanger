@@ -4,5 +4,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public interface onGenerateCardMidcombatInterface
 {
-    void onCreateCard(AbstractCard card);
+    default void onCreateCard(AbstractCard card){}
+    default void onCreateCardCard(AbstractCard card){}
 }

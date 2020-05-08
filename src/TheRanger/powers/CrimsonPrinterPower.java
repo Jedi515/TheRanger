@@ -28,6 +28,7 @@ public class CrimsonPrinterPower
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        copiedThisTurn = amount;
         updateDescription();
         this.type = PowerType.BUFF;
         loadRegion("echo");

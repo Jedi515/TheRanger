@@ -1,5 +1,6 @@
 package TheRanger.relics;
 
+import TheRanger.actions.CustomDiscoveryAction;
 import TheRanger.init.theRanger;
 import TheRanger.patches.RangerCardTags;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -14,7 +15,7 @@ public class RegularQuiver
     public static final String ID = theRanger.makeID("RegularQuiver");
 
     public RegularQuiver() {
-        super(ID, RelicTier.STARTER, LandingSound.FLAT);
+        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
         arrowPool = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         CardLibrary.getAllCards().stream().filter(c -> (c.hasTag(RangerCardTags.JEDIRANGER_ARROW) && c.rarity == AbstractCard.CardRarity.COMMON && !c.hasTag(AbstractCard.CardTags.HEALING))).forEach(c -> arrowPool.addToTop(c.makeCopy()));
     }
@@ -27,7 +28,7 @@ public class RegularQuiver
     @Override
     public void atBattleStart() {
         flash();
-        addToBot(new MakeTempCardInHandAction(arrowPool.getRandomCard(true).makeCopy()));
-//        addToBot(new CustomDiscoveryAction(arrowPool, 3));
+//        addToBot(new MakeTempCardInHandAction(arrowPool.getRandomCard(true).makeCopy()));
+        addToBot(new CustomDiscoveryAction(arrowPool, 3));
     }
 }

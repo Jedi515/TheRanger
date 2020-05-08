@@ -34,7 +34,7 @@ public class CrimsonChaos
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseHPAction(p, p, 4));
+        addToBot(new LoseHPAction(p, p, 3));
         for (int i = 1; i < magicNumber; i++)
         {
             addToBot(new MakeTempCardInDrawPileAction(theRanger.chaosCards.getRandomCard(true).makeCopy(), 1, true, true));
