@@ -39,6 +39,11 @@ public class CustomDiscoveryAction
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
+    public CustomDiscoveryAction(CardGroup group, Consumer<AbstractCard> callback)
+    {
+        this(group, 3, false, callback);
+    }
+
     public CustomDiscoveryAction(CardGroup group, int number)
     {
         this(group, number, false, null);

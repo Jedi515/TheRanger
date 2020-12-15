@@ -163,7 +163,7 @@
   },
   "jediranger:GlassArrow": {
     "NAME": "Стеклянная стрела",
-    "DESCRIPTION": "jediranger:Хрупкая !jediranger:BRT! NL Наносит !D! урона."
+    "DESCRIPTION": "Наносит !D! урона. NL Мимолётная."
   },
   "jediranger:GlassDagger": {
     "NAME": "Стеклянный нож",

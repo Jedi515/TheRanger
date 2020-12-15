@@ -5,8 +5,10 @@ import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -40,15 +42,20 @@ public class Rally
             @Override
             public void update()
             {
-                if (!p.drawPile.isEmpty())
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2)).type == CardType.SKILL)
                 {
-                    if (p.drawPile.getTopCard().type == CardType.SKILL)
-                    {
-                        addToBot(new EmpowerAction(p.hand, empoweringValue));
-                    }
+                    addToBot(new EmpowerAction(p.hand, empoweringValue));
                 }
                 isDone = true;
             }
         });
+    }
+
+    public void triggerOnGlowCheck() {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.SKILL) {
+            glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
     }
 }

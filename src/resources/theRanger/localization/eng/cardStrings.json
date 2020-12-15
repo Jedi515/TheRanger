@@ -1,11 +1,11 @@
 {
   "jediranger:AlarmClock": {
     "NAME": "Alarm Clock",
-    "DESCRIPTION": "Gain !B! Block. NL Put an jediranger:Empowerable card from your discard pile on top of your draw pile and jediranger:Empower !jediranger:EMP! it."
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile on top of your draw pile and jediranger:Empower !jediranger:EMP! it."
   },
   "jediranger:ArcaneSeer": {
     "NAME": "Arcane Seer",
-    "DESCRIPTION": "Gain !B! Block. NL This turn, whenever you play a card with no Block or damage, jediranger:Empower !M! the top card of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL jediranger:Discover next turn."
   },
   "jediranger:ArrowStab": {
     "NAME": "Arrow Stab",
@@ -57,8 +57,20 @@
   },
   "jediranger:CrimsonDiscovery": {
     "NAME": "Crimson Discovery",
-    "DESCRIPTION": "Lose !M! HP. NL Choose 1 of 3 Attacks to jediranger:Empower !jediranger:EMP! and add to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL Choose 1 of 3 Attacks to jediranger:Empower !jediranger:EMP! and add to your hand."
+    "DESCRIPTION": "Lose !M! HP. NL jediranger:Discover an Attack to jediranger:Empower !jediranger:EMP! and add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP. NL jediranger:Discover an Attack to jediranger:Empower !jediranger:EMP! and add to your hand."
+  },
+  "jediranger:CrimsonDuality": {
+    "NAME": "Crimson Duality",
+    "DESCRIPTION": "jediranger:Drain !D! or *Drain !jediranger:SD! ALL enemies. NL Exhaust."
+  },
+  "jediranger:CrimsonDualitySingle": {
+    "NAME": "Single",
+    "DESCRIPTION": "jediranger:Drain !D!."
+  },
+  "jediranger:CrimsonDualityALL": {
+    "NAME": "ALL",
+    "DESCRIPTION": "jediranger:Drain !D! ALL enemies."
   },
   "jediranger:CrimsonForm": {
     "NAME": "Crimson Form",
@@ -78,10 +90,7 @@
   },
   "jediranger:CrimsonOffering": {
     "NAME": "Crimson Offering",
-    "DESCRIPTION": "Exhaust any number of cards. NL jediranger:Empower !jediranger:EMP! that many cards on top of your draw pile. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Exhaust."
-    ]
+    "DESCRIPTION": "Lose !M! HP. NL jediranger:Drain !D! ALL enemies. NL Exhaust."
   },
   "jediranger:CrimsonPrinter": {
     "NAME": "Crimson Printer",
@@ -95,6 +104,10 @@
     "NAME": "Crimson Rune",
     "DESCRIPTION": "Whenever you lose HP during your turn, apply !M! Vulnerable to a random enemy.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you lose HP during your turn, apply !M! Vulnerable to a random enemy."
+  },
+  "jediranger:CrimsonStab": {
+    "NAME": "Crimson Stab",
+    "DESCRIPTION": "Deal !D! damage."
   },
   "jediranger:CrimsonSplitter": {
     "NAME": "Crimson Splitter",
@@ -121,7 +134,7 @@
   },
   "jediranger:EnchantedArrows": {
     "NAME": "Enchanted Arrows",
-    "DESCRIPTION": "Cards containing \"Arrow\" deal !M! additional damage."
+    "DESCRIPTION": "Whenever a card is created during combat, gain !M! temporary Strength."
   },
   "jediranger:EndlessArrow": {
     "NAME": "Endless Arrow",
@@ -133,11 +146,7 @@
   },
   "jediranger:FadingMemories": {
     "NAME": "Fading Memories",
-    "DESCRIPTION": "Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a card played this turn. NL Add an jediranger:Ephemeral copy of that card into your hand. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Select a card you played this turn to add to your hand"
-    ]
+    "DESCRIPTION": "jediranger:Discover a common Attack and NL grant it Exhaust."
   },
   "jediranger:FlashFreeze": {
     "NAME": "Flash Freeze",
@@ -148,10 +157,20 @@
     "DESCRIPTION": "Draw !M! card. NL Refill your [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Refill your [E]. NL Exhaust."
   },
+  "jediranger:FlashPowder": {
+    "NAME": "Flash Powder",
+    "DESCRIPTION": "Stun ALL enemies for !M! turn. NL Fleeting.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Stun ALL enemies for !M! turn. NL Fleeting."
+  },
   "jediranger:FocusingShard": {
     "NAME": "Focusing Shard",
     "DESCRIPTION": "Whenever you jediranger:Empower a card, jediranger:Empower it by !M! more.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you jediranger:Empower a card, jediranger:Empower it by !M! more."
+  },
+  "jediranger:Formless": {
+    "NAME": "Formless",
+    "DESCRIPTION": "jediranger:Discover a *Form card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "jediranger:Discover an upgraded *Form card. NL Exhaust."
   },
   "jediranger:FreshOfferings": {
     "NAME": "Fresh Offerings",
@@ -163,7 +182,7 @@
   },
   "jediranger:GlassArrow": {
     "NAME": "Glass Arrow",
-    "DESCRIPTION": "jediranger:Brittle !jediranger:BRT! NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Fleeting."
   },
   "jediranger:GlassDagger": {
     "NAME": "Glass Dagger",
@@ -216,7 +235,7 @@
   },
   "jediranger:LastGlory": {
     "NAME": "Last Glory",
-    "DESCRIPTION": "Whenever a card is Exhausted, jediranger:Empower !jediranger:EMP! the !M! top cards of your draw pile."
+    "DESCRIPTION": "Whenever a card is Exhausted, jediranger:Empower !jediranger:EMP! a random card."
   },
   "jediranger:MakeshiftArmor": {
     "NAME": "Makeshift Armor",
@@ -241,12 +260,9 @@
     "NAME": "One Shot",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each *Arrow played this combat. NL Exhaust."
   },
-  "jediranger:Overcharge": {
-    "NAME": "Overcharge",
-    "DESCRIPTION": "jediranger:Empower !jediranger:EMP! a card in hand and make it jediranger:Ephemeral. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Overcharge."
-    ]
+  "jediranger:DuskShield": {
+    "NAME": "Dusk Shield",
+    "DESCRIPTION": "Gain !B! Block. NL At jediranger:Dusk, gain !M! Block."
   },
   "jediranger:PainfulMemories": {
     "NAME": "Painful Memories",
@@ -261,7 +277,7 @@
   },
   "jediranger:PerfectSetup": {
     "NAME": "Perfect Setup",
-    "DESCRIPTION": "Scry !M!. NL Put a card from your discard pile on top of your draw pile."
+    "DESCRIPTION": "If jediranger:Dawn, deal !D! damage to ALL enemies. NL At jediranger:Dusk, play this card again at the start of next turn."
   },
   "jediranger:PerfectedArrow": {
     "NAME": "Perfected Arrow",
@@ -271,8 +287,8 @@
     "NAME": "Phoenix Tears",
     "DESCRIPTION": "Remove jediranger:Empower from ALL cards and heal that much HP. NL Fleeting."
   },
-  "jediranger:PiercingArrows": {
-    "NAME": "Piercing Arrows",
+  "jediranger:PiercingStrike": {
+    "NAME": "Piercing Strike",
     "DESCRIPTION": "Deal !D! damage to ALL enemies."
   },
   "jediranger:PowerBarrier": {
@@ -285,16 +301,16 @@
   },
   "jediranger:Rally": {
     "NAME": "Rally",
-    "DESCRIPTION": "Gain !B! Block. NL If the top card of your draw pile is a Skill, jediranger:Empower !jediranger:EMP! all cards in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL  If the last card played this combat was a Skill, jediranger:Empower !jediranger:EMP! all cards in your hand."
   },
   "jediranger:RaiderSpear": {
     "NAME": "Raider Spear",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL If the top card of your draw pile is an Attack, jediranger:Drain !D! ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL  If the last card played this combat was an Attack, jediranger:Drain !D! ALL enemies. NL Exhaust."
   },
   "jediranger:Remembrance": {
     "NAME": "Remembrance",
-    "DESCRIPTION": "Costs 1 less [E] for each card Exhausted this turn. NL Choose 1 of !M! rare cards from any character to add to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Costs 1 less [E] for each card Exhausted this turn. NL Choose 1 of !M! rare cards from any character to add to your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Costs 1 less [E] for each card Exhausted this turn. NL jediranger:Discover 1 of !M! rare cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Costs 1 less [E] for each card Exhausted this turn. NL jediranger:Discover 1 of !M! rare cards. NL It costs 0 this turn. NL Exhaust."
   },
   "jediranger:RivershaperStrike": {
     "NAME": "Rivershaper Strike",
@@ -302,14 +318,15 @@
   },
   "jediranger:RoughenFeathers": {
     "NAME": "Roughen Feathers",
-    "DESCRIPTION": "Deal !D! damage. jediranger:Empower !jediranger:EMP! the top !M! cards of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. jediranger:Discover a Skill and grant it Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. jediranger:Discover an upgraded Skill and grant it Exhaust."
   },
   "jediranger:Rummage": {
     "NAME": "Rummage",
     "DESCRIPTION": "Exhaust a card. NL Fetch !M! cards from your discard pile."
   },
-  "jediranger:SignalArrow": {
-    "NAME": "Signal Arrow",
+  "jediranger:SignalStrike": {
+    "NAME": "Signal Strike",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust. NL When Exhausted, draw !M! card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust. NL When Exhausted, draw !M! cards."
   },
@@ -337,7 +354,8 @@
   },
   "jediranger:Transfusion": {
     "NAME": "Transfusion",
-    "DESCRIPTION": "jediranger:Empower -1 a card in hand. NL jediranger:Empower !jediranger:EMP! the !M! cards of your draw pile."
+    "DESCRIPTION": "Exhaust a card to jediranger:Discover a card of same type.",
+    "UPGRADE_DESCRIPTION": "Retain. NL "
   },
   "jediranger:TwinDisciplines": {
     "NAME": "Twin Disciplines",

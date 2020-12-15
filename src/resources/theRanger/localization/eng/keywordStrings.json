@@ -39,5 +39,29 @@
       "recalled"
     ],
     "DESCRIPTION": "Put a number of cards from your discard pile to your hand."
+  },
+  {
+    "PROPER_NAME": "Discovery",
+    "NAMES": [
+      "discover",
+      "discovered"
+    ],
+    "DESCRIPTION": "Choose #b1 of #b3 cards to add to your hand."
+  },
+  {
+    "PROPER_NAME": "Dawn",
+    "NAMES": [
+      "dawn",
+      "dawn,"
+    ],
+    "DESCRIPTION": "Triggers if the card is played first in the turn"
+  },
+  {
+    "PROPER_NAME": "Dusk",
+    "NAMES": [
+      "dusk",
+      "dusk,"
+    ],
+    "DESCRIPTION": "Triggers at the end of the turn if the card was played last."
   }
 ]

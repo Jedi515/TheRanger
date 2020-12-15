@@ -1,18 +1,23 @@
 package TheRanger.powers;
 
 import TheRanger.init.theRanger;
+import TheRanger.interfaces.onGenerateCardMidcombatInterface;
 import TheRanger.patches.RangerCardTags;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EnchantedArrowsPower
     extends AbstractPower
+    implements onGenerateCardMidcombatInterface
 {
     public static final String POWER_ID = theRanger.makeID("EnchantedArrowsPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -37,10 +42,9 @@ public class EnchantedArrowsPower
         this.description = String.format(DESCRIPTIONS[0], this.amount);
     }
 
-    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card)
+    public void onCreateCard(AbstractCard card)
     {
-        if (card.hasTag(RangerCardTags.JEDIRANGER_ARROW)) return damage + amount;
-        return damage;
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount)));
     }
-
 }

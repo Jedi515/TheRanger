@@ -1,11 +1,10 @@
-package TheRanger.cards.Ranger.skills;
+package TheRanger.cards.Ranger.attacks;
 
-import TheRanger.actions.EmpowerTopdeckAction;
-import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
-import TheRanger.patches.RangerCardTags;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.unique.VampireDamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -21,24 +20,24 @@ public class CrimsonOffering
     public static final int COST = 2;
 
     public CrimsonOffering() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.SKILL, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.NONE);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         exhaust = true;
-        setEMPValue(3);
+        tags.add(CardTags.HEALING);
+        setMN(6);
+        setDamage(4);
+        isMultiDamage = true;
     }
 
     @Override
     public void upgrade() { if (upgraded) return;
         upgradeName();
-        upgradeEmpValue(1);
+        upgradeDamage(1);
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(999, EXTENDED_DESCRIPTION[0], true, true, c->true, list->{
-            if (list.size() > 0) {
-                addToBot(new EmpowerTopdeckAction(list.size(), empoweringValue));
-                list.forEach(c -> addToBot(new ExhaustSpecificCardAction(c, p.hand)));
-            }
-        }));
+    public void use(AbstractPlayer p, AbstractMonster m)
+    {
+        addToBot(new LoseHPAction(p, p, magicNumber));
+        addToBot(new VampireDamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 }

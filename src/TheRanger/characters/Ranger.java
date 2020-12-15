@@ -5,6 +5,8 @@ import TheRanger.cards.Ranger.attacks.CopperWave;
 import TheRanger.cards.Ranger.attacks.Strike;
 import TheRanger.cards.Ranger.skills.AlarmClock;
 import TheRanger.cards.Ranger.skills.Defend;
+import TheRanger.cards.Ranger.skills.DuskShield;
+import TheRanger.cards.Ranger.skills.FadingMemories;
 import TheRanger.init.theRanger;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.relics.GrindingWheel;
@@ -60,8 +62,8 @@ public class Ranger
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
 
-        retVal.add(AlarmClock.ID);
-        retVal.add(CopperWave.ID);
+        retVal.add(FadingMemories.ID);
+        retVal.add(DuskShield.ID);
 
         return retVal;
     }
@@ -70,7 +72,7 @@ public class Ranger
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(GrindingWheel.ID);
+        retVal.add(RegularQuiver.ID);
         return retVal;
     }
 

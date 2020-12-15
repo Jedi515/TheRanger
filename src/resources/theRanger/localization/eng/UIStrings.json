@@ -46,5 +46,12 @@
     "TEXT": [
       "%s NL Poison +%d"
     ]
+  },
+  "jediranger:CardAdditions":
+  {
+    "TEXT": [
+      " NL Exhaust."
+    ]
   }
+
 }

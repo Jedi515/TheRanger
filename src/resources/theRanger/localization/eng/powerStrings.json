@@ -2,7 +2,8 @@
   "jediranger:ArcaneSeer": {
     "NAME": "Arcane Seer",
     "DESCRIPTIONS": [
-      "When you play a card with no damage and #yBlock, #yEmpower #b%d the top card of your draw pile."
+      "At the start of next turn, #yDiscover #b%d time.",
+      "At the start of next turn, #yDiscover #b%d times."
     ]
   },
   "jediranger:DamageEndOfNextTurnPower": {
@@ -27,7 +28,7 @@
   "jediranger:EnchantedArrowsPower": {
     "NAME": "Enchanted Arrows",
     "DESCRIPTIONS": [
-      "Cards containing \"Arrow\" deal #b%d additional damage."
+      "Whenever a card is created during combat, gain #b%d temporary #yStrength."
     ]
   },
   "jediranger:CrimsonHarvestPower": {
@@ -39,7 +40,7 @@
   "jediranger:LastGloryPower": {
     "NAME": "Last Glory",
     "DESCRIPTIONS": [
-      "Whenever a card is #yExhausted, #yEmpower #b%d the top #b%d cards of your draw pile."
+      "Whenever a card is #yExhausted, #yEmpower #b%d a random card."
     ]
   },
   "jediranger:CrimsonFormPower": {
@@ -89,6 +90,12 @@
     "NAME": "Focusing Shard",
     "DESCRIPTIONS": [
       "Whenever you #yEmpower a card, #yEmpower it by #b%d more."
+    ]
+  },
+  "jediranger:PerfectSetupPower": {
+    "NAME" : "Perfect Setup",
+    "DESCRIPTION":  [
+      "Fuck"
     ]
   }
 }

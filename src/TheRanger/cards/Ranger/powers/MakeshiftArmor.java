@@ -22,7 +22,7 @@ public class MakeshiftArmor
     public MakeshiftArmor()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        setMN(3);
+        setMN(4);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class MakeshiftArmor
     {
         if (upgraded) return;
         upgradeName();
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 
     @Override

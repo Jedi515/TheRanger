@@ -20,7 +20,6 @@ public class LastGlory
 
     public LastGlory() {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.POWER, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        setMN(2);
         setEMPValue(2);
     }
 
@@ -32,6 +31,6 @@ public class LastGlory
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new LastGloryPower(p, magicNumber, empoweringValue), empoweringValue));
+        addToBot(new ApplyPowerAction(p, p, new LastGloryPower(p, empoweringValue)));
     }
 }

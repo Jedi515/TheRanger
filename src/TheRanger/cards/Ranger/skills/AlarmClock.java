@@ -36,6 +36,6 @@ public class AlarmClock
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new MoveCardsAction(AbstractDungeon.player.drawPile, AbstractDungeon.player.discardPile, EmpowerAction::isEmpowerable, 1, cardList-> cardList.forEach(c -> EmpowerAction.empowerCard(c, empoweringValue))));
+        addToBot(new MoveCardsAction(AbstractDungeon.player.drawPile, AbstractDungeon.player.discardPile, (card) -> true, 1, cardList-> cardList.forEach(c -> EmpowerAction.empowerCard(c, empoweringValue))));
     }
 }

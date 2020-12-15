@@ -1,10 +1,8 @@
 package TheRanger.powers;
 
-import TheRanger.actions.EmpowerTopdeckAction;
 import TheRanger.init.theRanger;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.unique.DiscoveryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,20 +30,17 @@ public class ArcaneSeerPower
 
     public void updateDescription()
     {
-        this.description = String.format(DESCRIPTIONS[0], this.amount);
-    }
+        if (amount == 1)
+        description = String.format(DESCRIPTIONS[0], this.amount);
+        else
+            description = String.format(DESCRIPTIONS[1], this.amount);
 
-    public void onUseCard(AbstractCard c, UseCardAction action)
-    {
-        if ((c.baseBlock == -1) && (c.baseDamage == -1))
-        {
-            addToBot(new EmpowerTopdeckAction(1, amount));
-        }
     }
 
     public void atStartOfTurn()
     {
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new RemoveSpecificPowerAction(p, p, this.ID));
+        for (int i = 0; i < amount; i++) addToBot(new DiscoveryAction());
     }
 }

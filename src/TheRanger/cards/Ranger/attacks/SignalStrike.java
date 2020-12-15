@@ -14,20 +14,20 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
-public class SignalArrow
+public class SignalStrike
     extends RangerCard
 {
-    public static final String ID = makeCardID("SignalArrow");
+    public static final String ID = makeCardID("SignalStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final int COST = 1;
 
-    public SignalArrow()
+    public SignalStrike()
     {
         super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        tags.add(RangerCardTags.JEDIRANGER_ARROW);
+        tags.add(CardTags.STRIKE);
         setDamage(9);
         setMN(1);
         exhaust = true;

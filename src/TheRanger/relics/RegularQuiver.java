@@ -2,33 +2,45 @@ package TheRanger.relics;
 
 import TheRanger.actions.CustomDiscoveryAction;
 import TheRanger.init.theRanger;
+import TheRanger.interfaces.onGenerateCardMidcombatInterface;
 import TheRanger.patches.RangerCardTags;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RegularQuiver
     extends RangerRelic
+    implements onGenerateCardMidcombatInterface
 {
-    private static CardGroup arrowPool;
     public static final String ID = theRanger.makeID("RegularQuiver");
+    public boolean triggered = false;
+    public static int str = 2;
 
     public RegularQuiver() {
-        super(ID, RelicTier.UNCOMMON, LandingSound.FLAT);
-        arrowPool = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        CardLibrary.getAllCards().stream().filter(c -> (c.hasTag(RangerCardTags.JEDIRANGER_ARROW) && c.rarity == AbstractCard.CardRarity.COMMON && !c.hasTag(AbstractCard.CardTags.HEALING))).forEach(c -> arrowPool.addToTop(c.makeCopy()));
+        super(ID, RelicTier.STARTER, LandingSound.FLAT);
     }
 
     public String getUpdatedDescription()
     {
-        return DESCRIPTIONS[0];
+        return String.format(DESCRIPTIONS[0], str);
     }
 
     @Override
     public void atBattleStart() {
-        flash();
-//        addToBot(new MakeTempCardInHandAction(arrowPool.getRandomCard(true).makeCopy()));
-        addToBot(new CustomDiscoveryAction(arrowPool, 3));
+        triggered = false;
+    }
+
+    public void onCreateCard(AbstractCard card)
+    {
+        if (!triggered)
+        {
+            flash();
+            triggered = true;
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, str)));
+        }
     }
 }

@@ -20,7 +20,7 @@
     "NAME": "Regular Quiver",
     "FLAVOR": "It actually tastes a bit salty and metallic. Why did you lick a quiver again?",
     "DESCRIPTIONS": [
-      "At the start of each combat, choose #b1 of #b3 cards containing #y\"Arrow\" to add to your hand."
+      "The first time each combat a card is generated, gain #b%d #yStrength."
     ]
   },
   "jediranger:SharpFang":
@@ -36,7 +36,8 @@
     "NAME": "Grinding Wheel",
     "FLAVOR": "Too old and used up for your entire weapon, but has just enough power to sharpen the tip.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yjediranger:Empower #b1 the top #b2 cards of your draw pile."
+      "At the start of each combat, #yjediranger:Empower a card in hand by its combined damage and #yBlock.",
+      "Empower like heck."
     ]
   },
   "jediranger:CursedBlood":
@@ -44,7 +45,7 @@
     "NAME": "Cursed Blood",
     "FLAVOR": "You suddenly feel a disturbing lack of crimson liquid in your body.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. At the start of each battle, #yjediranger:Empower #r%d ALL cards."
+      "Gain [E] at the start of your turn. The first card created each combat becomes a #yWound instead."
     ]
   }
 }

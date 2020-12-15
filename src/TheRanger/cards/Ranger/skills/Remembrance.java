@@ -7,10 +7,15 @@ import TheRanger.interfaces.cardOnExhaustOther;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.patches.ExhaustedPerTurnPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Remembrance
     extends RangerCard
@@ -38,7 +43,12 @@ public class Remembrance
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new CustomDiscoveryAction(theRanger.remembranceCards, magicNumber, false, c ->
+        CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        group.group = CardLibrary.getAllCards().stream().filter(c ->
+                        (c.rarity == AbstractCard.CardRarity.RARE) &&
+                                (!c.hasTag(AbstractCard.CardTags.HEALING))).collect(Collectors.toCollection(ArrayList::new));
+
+        addToBot(new CustomDiscoveryAction(group, magicNumber, false, c ->
         {
             if (this.upgraded) c.setCostForTurn(0);
         }

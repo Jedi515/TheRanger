@@ -3,12 +3,16 @@ package TheRanger.cards.Ranger.skills;
 import TheRanger.actions.RefillManaAction;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class FlashOfInspiration
     extends RangerCard
@@ -48,6 +52,17 @@ public class FlashOfInspiration
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
-        addToBot(new RefillManaAction());
+        addToBot(new AbstractGameAction()
+        {
+            @Override
+            public void update()
+            {
+                isDone = true;
+                if (EnergyPanel.totalCount < AbstractDungeon.player.energy.energyMaster)
+                {
+                    addToBot(new GainEnergyAction(AbstractDungeon.player.energy.energyMaster - EnergyPanel.totalCount));
+                }
+            }
+        });
     }
 }

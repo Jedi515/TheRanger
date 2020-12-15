@@ -2,6 +2,7 @@ package TheRanger.init;
 
 import TheRanger.cardMods.UndyingDamageUp;
 import TheRanger.cards.Ranger.RangerCard;
+import TheRanger.cards.Ranger.attacks.CrimsonDuality;
 import TheRanger.cards.Ranger.attacks.Undying;
 import TheRanger.characters.Ranger;
 import TheRanger.interfaces.onGenerateCardMidcombatInterface;
@@ -52,9 +53,9 @@ public class theRanger
     public static final String modID = "jediranger";
     public static Color rangerTeal = CardHelper.getColor(43.0F, 207.0F, 213.0F);
     public static CardGroup chaosCards;
-    public static CardGroup remembranceCards;
     public static int cardsCreatedThisTurn = 0;
     public static int cardsCreatedThisCombat = 0;
+    public static UIStrings cardAdditions;
 
     public static String makeID(String ID_in)
     {
@@ -86,6 +87,7 @@ public class theRanger
     {
         BaseMod.addDynamicVariable(new EmpowerVariable());
         BaseMod.addDynamicVariable(new BrittleVariable());
+        BaseMod.addDynamicVariable(new CrimsonDuality.SecondDamageVariable());
         new AutoAdd(modID).packageFilter(RangerCard.class).setDefaultSeen(true).cards();
     }
 
@@ -159,20 +161,34 @@ public class theRanger
     public void receivePostInitialize()
     {
         chaosCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        remembranceCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         CardLibrary.getAllCards().stream().filter(c ->
                 (c.rarity != AbstractCard.CardRarity.SPECIAL) &&
                         (c.rarity != AbstractCard.CardRarity.BASIC) &&
                         (c.type != AbstractCard.CardType.CURSE) &&
                         (c.type != AbstractCard.CardType.STATUS)
         ).forEach(c -> chaosCards.group.add(c.makeCopy()));
-        CardLibrary.getAllCards().stream().filter(c ->
-                        (c.rarity == AbstractCard.CardRarity.RARE) &&
-                        (!c.hasTag(AbstractCard.CardTags.HEALING))
-        ).forEach(c -> remembranceCards.addToTop(c.makeCopy()));
+
+        cardAdditions = CardCrawlGame.languagePack.getUIString("jediranger:CardAdditions");
     }
+
     public static void onGenerateCardMidcombat(AbstractCard c)
     {
+        AbstractCard[] cc = new AbstractCard[1];
+        cc[0] = c;
+
+        AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).preCreateCard(cc));
+        AbstractDungeon.player.powers.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).preCreateCard(cc));
+        AbstractDungeon.player.hand.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).preCreateCard(cc));
+        AbstractDungeon.player.discardPile.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).preCreateCard(cc));
+        AbstractDungeon.player.drawPile.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).preCreateCard(cc));
+        AbstractDungeon.getMonsters().monsters.stream().filter(mon -> !mon.isDeadOrEscaped()).forEach(m -> m.powers.stream().filter(pow -> pow instanceof onGenerateCardMidcombatInterface).forEach(pow -> ((onGenerateCardMidcombatInterface)pow).preCreateCard(cc)));
+        if (c instanceof onGenerateCardMidcombatInterface)
+        {
+            ((onGenerateCardMidcombatInterface)c).preCreateCard(cc);
+        }
+
+        if (cc[0] == null) return;
+
         AbstractDungeon.player.relics.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
         AbstractDungeon.player.powers.stream().filter(r -> r instanceof onGenerateCardMidcombatInterface).forEach(r -> ((onGenerateCardMidcombatInterface)r).onCreateCard(c));
         AbstractDungeon.player.hand.group.stream().filter(card -> card instanceof onGenerateCardMidcombatInterface).forEach(card -> ((onGenerateCardMidcombatInterface)card).onCreateCardCard(c));

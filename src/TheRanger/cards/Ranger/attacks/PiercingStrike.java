@@ -14,21 +14,21 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
-public class PiercingArrows
+public class PiercingStrike
     extends RangerCard
 {
-    public static final String ID = makeCardID("PiercingArrows");
+    public static final String ID = makeCardID("PiercingStrike");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final int COST = 1;
 
-    public PiercingArrows()
+    public PiercingStrike()
     {
         super(ID, NAME, null, COST, DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, AbstractCard.CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         setDamage(7);
         isMultiDamage = true;
-        tags.add(RangerCardTags.JEDIRANGER_ARROW);
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

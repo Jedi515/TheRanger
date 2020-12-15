@@ -3,6 +3,7 @@ package TheRanger.cards.Ranger.attacks;
 import TheRanger.cards.Ranger.RangerCard;
 import TheRanger.patches.AbstractCardEnum;
 import TheRanger.patches.RangerCardTags;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -19,19 +20,18 @@ public class GlassArrow
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final int COST = 2;
+    public static final int COST = 1;
 
     public GlassArrow() {
-        super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, NAME, null, COST, DESCRIPTION, CardType.ATTACK, AbstractCardEnum.RANGER_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
         setDamage(15);
-        setBrittle(3);
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override
     public void upgrade() { if (upgraded) return;
         upgradeName();
         upgradeDamage(5);
-        upgradeBrittle(1);
     }
 
     @Override

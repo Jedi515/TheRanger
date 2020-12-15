@@ -66,7 +66,32 @@ public abstract class RangerRelic
                 }
                 this.cardToPreview.current_y = InputHelper.mY - 100 * this.scale;
             }
-            this.cardToPreview.drawScale = scale * 0.8F;
+            this.cardToPreview.drawScale = scale * 0.6F;
+            this.cardToPreview.render(sb);
+        }
+    }
+
+    public void renderBossCardPreview(SpriteBatch sb)
+    {
+        if (cardToPreview != null)
+        {
+            if (CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.RELIC_VIEW)
+            {
+                cardToPreview.current_x = Settings.WIDTH - 380 * Settings.scale;
+                cardToPreview.current_y = Settings.HEIGHT * 0.6F;
+            }
+            else
+            {
+                if (this.currentX > (float) Settings.WIDTH * 0.75F)
+                {
+                    this.cardToPreview.current_x = currentX - 420 * this.scale;
+                } else
+                {
+                    this.cardToPreview.current_x = currentX + 420 * this.scale;
+                }
+                this.cardToPreview.current_y = currentY - 100 * this.scale;
+            }
+            this.cardToPreview.drawScale = scale * 0.6F;
             this.cardToPreview.render(sb);
         }
     }
@@ -75,6 +100,6 @@ public abstract class RangerRelic
     public void renderBossTip(SpriteBatch sb)
     {
         super.renderBossTip(sb);
-        renderCardPreview(sb);
+        renderBossCardPreview(sb);
     }
 }

@@ -1,6 +1,7 @@
 package TheRanger.relics;
 
-import TheRanger.actions.EmpowerTopdeckAction;
+import TheRanger.actions.EmpowerAction;
+import TheRanger.actions.SelectCardsInHandAction;
 import TheRanger.init.theRanger;
 
 public class GrindingWheel
@@ -14,10 +15,19 @@ public class GrindingWheel
     }
 
     @Override
-    public void atTurnStart()
+    public void atBattleStart()
     {
         flash();
-        addToBot(new EmpowerTopdeckAction(2, 1));
+        addToBot(new SelectCardsInHandAction(DESCRIPTIONS[1], EmpowerAction::isEmpowerable, group ->
+        {
+            group.forEach(card ->
+            {
+                int emp = 0;
+                if (card.baseDamage > 0) emp += card.damage;
+                if (card.baseBlock > 0) emp += card.block;
+                addToBot(new EmpowerAction(card, emp));
+            });
+        }));
     }
 
     public String getUpdatedDescription()
